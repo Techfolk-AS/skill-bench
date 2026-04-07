@@ -16,3 +16,104 @@ body {
   background: var(--background);
   color: var(--foreground);
 }
+
+/* Hero section */
+
+.hero-section {
+  position: relative;
+  background: radial-gradient(ellipse 80% 60% at 50% -20%, rgba(120, 119, 198, 0.12), transparent);
+}
+
+.hero-glow {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 30% 50%, rgba(56, 189, 148, 0.06), transparent 50%),
+    radial-gradient(circle at 70% 50%, rgba(120, 119, 198, 0.06), transparent 50%);
+  animation: glow-drift 12s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes glow-drift {
+  0% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+  100% { opacity: 0.6; transform: scale(1); }
+}
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, black 20%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-title {
+  line-height: 1.1;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #38bd94, #7877c6, #38bd94);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 6s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #38bd94;
+  box-shadow: 0 0 6px rgba(56, 189, 148, 0.5);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.6; box-shadow: 0 0 4px rgba(56, 189, 148, 0.3); }
+  50% { opacity: 1; box-shadow: 0 0 10px rgba(56, 189, 148, 0.6); }
+}
+
+/* Signal cards */
+
+.signal-card {
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.signal-card:hover {
+  border-color: rgba(56, 189, 148, 0.3);
+  box-shadow: 0 0 20px rgba(56, 189, 148, 0.05), inset 0 1px 0 rgba(56, 189, 148, 0.1);
+}
+
+/* Step timeline */
+
+.step-card::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(56, 189, 148, 0.2), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.step-card:hover::before {
+  opacity: 1;
+}
+
+/* Smooth scroll */
+
+html {
+  scroll-behavior: smooth;
+}
