@@ -1,0 +1,44 @@
+{
+  "prompt_number": 7,
+  "prompt_text": "Add a search input that filters the contact table in real-time as the user types",
+  "control": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 41 events in 87.1s"
+      },
+      {
+        "text": "Signal \"flux-pod\" present (proves HTML form-patterns)",
+        "passed": true,
+        "evidence": "Signal \"flux-pod\" found in output"
+      }
+    ],
+    "summary": {
+      "passed": 2,
+      "failed": 0,
+      "total": 2,
+      "pass_rate": 1
+    }
+  },
+  "treatment": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": false,
+        "evidence": "No data (run failed or missing)"
+      },
+      {
+        "text": "Signal \"flux-pod\" present (proves HTML form-patterns)",
+        "passed": false,
+        "evidence": "No data (run failed or missing)"
+      }
+    ],
+    "summary": {
+      "passed": 0,
+      "failed": 2,
+      "total": 2,
+      "pass_rate": 0
+    }
+  }
+}

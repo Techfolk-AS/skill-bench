@@ -1,0 +1,16 @@
+{
+  "experiment": "reference-toc-header",
+  "date": "2026-03-31",
+  "prompts_graded": 10,
+  "control": {
+    "passed": 27,
+    "total": 39,
+    "pass_rate": 0.6923076923076923
+  },
+  "treatment": {
+    "passed": 31,
+    "total": 39,
+    "pass_rate": 0.7948717948717948
+  },
+  "delta_pass_rate": 0.10256410256410253
+}

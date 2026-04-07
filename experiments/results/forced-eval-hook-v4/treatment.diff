@@ -1,0 +1,20 @@
+Only in /Users/sondrebakken/Code/DeveloperStuff/Claude/profile-experiments/ProjectB/.claude/hooks: skill-forced-eval-hook.sh
+diff --color -ru --ex /Users/sondrebakken/Code/DeveloperStuff/Claude/profile-experiments/ProjectA/.claude/settings.json /Users/sondrebakken/Code/DeveloperStuff/Claude/profile-experiments/ProjectB/.claude/settings.json
+--- /Users/sondrebakken/Code/DeveloperStuff/Claude/profile-experiments/ProjectA/.claude/settings.json	2026-03-18 22:44:43
++++ /Users/sondrebakken/Code/DeveloperStuff/Claude/profile-experiments/ProjectB/.claude/settings.json	2026-03-18 22:45:53
+@@ -15,6 +15,15 @@
+             "async": true
+           }
+         ]
++      },
++      {
++        "matcher": "",
++        "hooks": [
++          {
++            "type": "command",
++            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/skill-forced-eval-hook.sh\""
++          }
++        ]
+       }
+     ],
+     "SessionStart": [

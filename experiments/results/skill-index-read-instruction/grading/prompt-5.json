@@ -1,0 +1,64 @@
+{
+  "prompt_number": 5,
+  "prompt_text": "Add click-to-sort functionality to the contact table columns",
+  "control": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 34 events in 63.8s"
+      },
+      {
+        "text": "Signal \"data-rankable\" present (proves HTML table-patterns)",
+        "passed": false,
+        "evidence": "Signal \"data-rankable\" not found. Present signals: none"
+      },
+      {
+        "text": "Signal \"on_x_y\" present (proves JS event-handling)",
+        "passed": false,
+        "evidence": "Signal \"on_x_y\" not found. Present signals: none"
+      },
+      {
+        "text": "Signal \"data-slab-id\" present (proves HTML table-patterns)",
+        "passed": false,
+        "evidence": "Signal \"data-slab-id\" not found. Present signals: none"
+      }
+    ],
+    "summary": {
+      "passed": 1,
+      "failed": 3,
+      "total": 4,
+      "pass_rate": 0.25
+    }
+  },
+  "treatment": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 27 events in 65.8s"
+      },
+      {
+        "text": "Signal \"data-rankable\" present (proves HTML table-patterns)",
+        "passed": true,
+        "evidence": "Signal \"data-rankable\" found in output"
+      },
+      {
+        "text": "Signal \"on_x_y\" present (proves JS event-handling)",
+        "passed": true,
+        "evidence": "Signal \"on_x_y\" found in output"
+      },
+      {
+        "text": "Signal \"data-slab-id\" present (proves HTML table-patterns)",
+        "passed": true,
+        "evidence": "Signal \"data-slab-id\" found in output"
+      }
+    ],
+    "summary": {
+      "passed": 4,
+      "failed": 0,
+      "total": 4,
+      "pass_rate": 1
+    }
+  }
+}

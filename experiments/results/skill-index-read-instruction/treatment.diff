@@ -1,0 +1,29 @@
+--- profile-experiments/ProjectA/CLAUDE.md	2026-03-30 11:27:10
++++ profile-experiments/ProjectB/CLAUDE.md	2026-03-30 11:28:01
+@@ -4,5 +4,24 @@
+ 
+ Built with vanilla HTML, CSS, and JavaScript (ES modules).
+ 
+-<!-- SKILL-INDEX-START -->
+-<!-- SKILL-INDEX-END -->
++## Available Documentation
++
++Before starting any task, identify which docs below are relevant and read them first.
++
++### CSS
++- `.claude/skills/css/references/layout-patterns.md` — layout containers, spacing, grid/flex
++- `.claude/skills/css/references/animation-patterns.md` — animations, transitions, motion
++- `.claude/skills/css/references/theming.md` — dark mode, color properties, themes
++- `.claude/skills/css/references/best-practices.md` — naming, selectors, responsive
++
++### HTML
++- `.claude/skills/html/references/form-patterns.md` — forms, inputs, validation
++- `.claude/skills/html/references/dialog-patterns.md` — modals, dialogs, confirmations
++- `.claude/skills/html/references/table-patterns.md` — data tables, sorting, row actions
++- `.claude/skills/html/references/best-practices.md` — semantics, accessibility
++
++### JavaScript
++- `.claude/skills/javascript/references/event-handling.md` — event binding, handlers
++- `.claude/skills/javascript/references/state-management.md` — state, reactive UI
++- `.claude/skills/javascript/references/fetch-patterns.md` — API calls, fetch wrapper
++- `.claude/skills/javascript/references/best-practices.md` — ES modules, error handling

@@ -1,0 +1,74 @@
+{
+  "prompt_number": 7,
+  "prompt_text": "Add a search input that filters the contact table in real-time as the user types",
+  "control": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 41 events in 72.9s"
+      },
+      {
+        "text": "Signal \"data-rack\" present (proves CSS layout-patterns)",
+        "passed": false,
+        "evidence": "Signal \"data-rack\" not found. Present signals: none"
+      },
+      {
+        "text": "Signal \"flux-pod\" present (proves HTML form-patterns)",
+        "passed": false,
+        "evidence": "Signal \"flux-pod\" not found. Present signals: none"
+      },
+      {
+        "text": "Signal \"data-slab-id\" present (proves HTML table-patterns)",
+        "passed": false,
+        "evidence": "Signal \"data-slab-id\" not found. Present signals: none"
+      },
+      {
+        "text": "Signal \"--seam\" present (proves CSS layout-patterns)",
+        "passed": false,
+        "evidence": "Signal \"--seam\" not found. Present signals: none"
+      }
+    ],
+    "summary": {
+      "passed": 1,
+      "failed": 4,
+      "total": 5,
+      "pass_rate": 0.2
+    }
+  },
+  "treatment": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 25 events in 100.3s"
+      },
+      {
+        "text": "Signal \"data-rack\" present (proves CSS layout-patterns)",
+        "passed": true,
+        "evidence": "Signal \"data-rack\" found in output"
+      },
+      {
+        "text": "Signal \"flux-pod\" present (proves HTML form-patterns)",
+        "passed": true,
+        "evidence": "Signal \"flux-pod\" found in output"
+      },
+      {
+        "text": "Signal \"data-slab-id\" present (proves HTML table-patterns)",
+        "passed": true,
+        "evidence": "Signal \"data-slab-id\" found in output"
+      },
+      {
+        "text": "Signal \"--seam\" present (proves CSS layout-patterns)",
+        "passed": true,
+        "evidence": "Signal \"--seam\" found in output"
+      }
+    ],
+    "summary": {
+      "passed": 5,
+      "failed": 0,
+      "total": 5,
+      "pass_rate": 1
+    }
+  }
+}

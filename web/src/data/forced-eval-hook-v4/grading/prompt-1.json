@@ -1,0 +1,84 @@
+{
+  "prompt_number": 1,
+  "prompt_text": "Create a blog layout with a sidebar and main content area",
+  "control": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 21 events in 68.5s"
+      },
+      {
+        "text": "Signal \"data-rack\" present (proves CSS layout-patterns)",
+        "passed": true,
+        "evidence": "Signal \"data-rack\" found in output"
+      },
+      {
+        "text": "Signal \"--seam\" present (proves CSS layout-patterns)",
+        "passed": true,
+        "evidence": "Signal \"--seam\" found in output"
+      },
+      {
+        "text": "Signal \"data-coat\" present (proves CSS theming)",
+        "passed": true,
+        "evidence": "Signal \"data-coat\" found in output"
+      },
+      {
+        "text": "Signal \"--ink-\" present (proves CSS theming)",
+        "passed": true,
+        "evidence": "Signal \"--ink-\" found in output"
+      },
+      {
+        "text": "Signal \".plate-\" present (proves CSS theming)",
+        "passed": true,
+        "evidence": "Signal \".plate-\" found in output"
+      }
+    ],
+    "summary": {
+      "passed": 6,
+      "failed": 0,
+      "total": 6,
+      "pass_rate": 1
+    }
+  },
+  "treatment": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 19 events in 49.5s"
+      },
+      {
+        "text": "Signal \"data-rack\" present (proves CSS layout-patterns)",
+        "passed": true,
+        "evidence": "Signal \"data-rack\" found in output"
+      },
+      {
+        "text": "Signal \"--seam\" present (proves CSS layout-patterns)",
+        "passed": true,
+        "evidence": "Signal \"--seam\" found in output"
+      },
+      {
+        "text": "Signal \"data-coat\" present (proves CSS theming)",
+        "passed": false,
+        "evidence": "Signal \"data-coat\" not found. Present signals: data-rack, --seam"
+      },
+      {
+        "text": "Signal \"--ink-\" present (proves CSS theming)",
+        "passed": false,
+        "evidence": "Signal \"--ink-\" not found. Present signals: data-rack, --seam"
+      },
+      {
+        "text": "Signal \".plate-\" present (proves CSS theming)",
+        "passed": false,
+        "evidence": "Signal \".plate-\" not found. Present signals: data-rack, --seam"
+      }
+    ],
+    "summary": {
+      "passed": 3,
+      "failed": 3,
+      "total": 6,
+      "pass_rate": 0.5
+    }
+  }
+}

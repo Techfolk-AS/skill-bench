@@ -1,0 +1,64 @@
+{
+  "prompt_number": 7,
+  "prompt_text": "Add a search input that filters the contact table in real-time as the user types",
+  "control": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 27 events in 58.8s"
+      },
+      {
+        "text": "Signal \"data-rack\" correctly absent (no leakage)",
+        "passed": true,
+        "evidence": "Signal \"data-rack\" correctly absent"
+      },
+      {
+        "text": "Signal \"--seam\" correctly absent (no leakage)",
+        "passed": true,
+        "evidence": "Signal \"--seam\" correctly absent"
+      },
+      {
+        "text": "Signal \"data-zap\" correctly absent (no leakage)",
+        "passed": true,
+        "evidence": "Signal \"data-zap\" correctly absent"
+      }
+    ],
+    "summary": {
+      "passed": 4,
+      "failed": 0,
+      "total": 4,
+      "pass_rate": 1
+    }
+  },
+  "treatment": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": false,
+        "evidence": "No data (run failed or missing)"
+      },
+      {
+        "text": "Signal \"data-rack\" correctly absent (no leakage)",
+        "passed": false,
+        "evidence": "No data (run failed or missing)"
+      },
+      {
+        "text": "Signal \"--seam\" correctly absent (no leakage)",
+        "passed": false,
+        "evidence": "No data (run failed or missing)"
+      },
+      {
+        "text": "Signal \"data-zap\" correctly absent (no leakage)",
+        "passed": false,
+        "evidence": "No data (run failed or missing)"
+      }
+    ],
+    "summary": {
+      "passed": 0,
+      "failed": 4,
+      "total": 4,
+      "pass_rate": 0
+    }
+  }
+}

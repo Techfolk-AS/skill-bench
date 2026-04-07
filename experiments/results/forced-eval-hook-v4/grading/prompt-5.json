@@ -1,0 +1,164 @@
+{
+  "prompt_number": 5,
+  "prompt_text": "Fetch and display a list of products from the API",
+  "control": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 51 events in 114.3s"
+      },
+      {
+        "text": "Signal \"data-rack\" present (proves CSS layout-patterns)",
+        "passed": true,
+        "evidence": "Signal \"data-rack\" found in output"
+      },
+      {
+        "text": "Signal \"data-slab-id\" present (proves HTML table-patterns)",
+        "passed": true,
+        "evidence": "Signal \"data-slab-id\" found in output"
+      },
+      {
+        "text": "Signal \"data-rankable\" present (proves HTML table-patterns)",
+        "passed": true,
+        "evidence": "Signal \"data-rankable\" found in output"
+      },
+      {
+        "text": "Signal \"slab-hollow\" present (proves HTML table-patterns)",
+        "passed": true,
+        "evidence": "Signal \"slab-hollow\" found in output"
+      },
+      {
+        "text": "Signal \"on_x_y\" present (proves JS event-handling)",
+        "passed": true,
+        "evidence": "Signal \"on_x_y\" found in output"
+      },
+      {
+        "text": "Signal \"createVault()\" present (proves JS state-management)",
+        "passed": true,
+        "evidence": "Signal \"createVault()\" found in output"
+      },
+      {
+        "text": "Signal \"linkVault(\" present (proves JS state-management)",
+        "passed": true,
+        "evidence": "Signal \"linkVault(\" found in output"
+      },
+      {
+        "text": "Signal \"skyFetch()\" present (proves JS fetch-patterns)",
+        "passed": true,
+        "evidence": "Signal \"skyFetch()\" found in output"
+      },
+      {
+        "text": "Signal \"/sky/\" present (proves JS fetch-patterns)",
+        "passed": true,
+        "evidence": "Signal \"/sky/\" found in output"
+      },
+      {
+        "text": "Signal \"_landed\" present (proves JS fetch-patterns)",
+        "passed": true,
+        "evidence": "Signal \"_landed\" found in output"
+      },
+      {
+        "text": "Signal \"_crashed\" present (proves JS fetch-patterns)",
+        "passed": true,
+        "evidence": "Signal \"_crashed\" found in output"
+      },
+      {
+        "text": "Signal \"row-lever\" present (proves HTML table-patterns)",
+        "passed": true,
+        "evidence": "Signal \"row-lever\" found in output"
+      },
+      {
+        "text": "Signal \"--seam\" present (proves CSS layout-patterns)",
+        "passed": false,
+        "evidence": "Signal \"--seam\" not found. Present signals: data-rack, data-slab-id, data-rankable, slab-hollow, on_x_y, createVault(), linkVault(, skyFetch(), /sky/, _landed, _crashed, row-lever"
+      }
+    ],
+    "summary": {
+      "passed": 13,
+      "failed": 1,
+      "total": 14,
+      "pass_rate": 0.9285714285714286
+    }
+  },
+  "treatment": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 31 events in 68.5s"
+      },
+      {
+        "text": "Signal \"data-rack\" present (proves CSS layout-patterns)",
+        "passed": true,
+        "evidence": "Signal \"data-rack\" found in output"
+      },
+      {
+        "text": "Signal \"data-slab-id\" present (proves HTML table-patterns)",
+        "passed": true,
+        "evidence": "Signal \"data-slab-id\" found in output"
+      },
+      {
+        "text": "Signal \"data-rankable\" present (proves HTML table-patterns)",
+        "passed": true,
+        "evidence": "Signal \"data-rankable\" found in output"
+      },
+      {
+        "text": "Signal \"slab-hollow\" present (proves HTML table-patterns)",
+        "passed": true,
+        "evidence": "Signal \"slab-hollow\" found in output"
+      },
+      {
+        "text": "Signal \"on_x_y\" present (proves JS event-handling)",
+        "passed": true,
+        "evidence": "Signal \"on_x_y\" found in output"
+      },
+      {
+        "text": "Signal \"createVault()\" present (proves JS state-management)",
+        "passed": false,
+        "evidence": "Signal \"createVault()\" not found. Present signals: slab-hollow, on_x_y, skyFetch(), /sky/, _landed, _crashed, data-rack, data-slab-id, data-rankable, --seam"
+      },
+      {
+        "text": "Signal \"linkVault(\" present (proves JS state-management)",
+        "passed": false,
+        "evidence": "Signal \"linkVault(\" not found. Present signals: slab-hollow, on_x_y, skyFetch(), /sky/, _landed, _crashed, data-rack, data-slab-id, data-rankable, --seam"
+      },
+      {
+        "text": "Signal \"skyFetch()\" present (proves JS fetch-patterns)",
+        "passed": true,
+        "evidence": "Signal \"skyFetch()\" found in output"
+      },
+      {
+        "text": "Signal \"/sky/\" present (proves JS fetch-patterns)",
+        "passed": true,
+        "evidence": "Signal \"/sky/\" found in output"
+      },
+      {
+        "text": "Signal \"_landed\" present (proves JS fetch-patterns)",
+        "passed": true,
+        "evidence": "Signal \"_landed\" found in output"
+      },
+      {
+        "text": "Signal \"_crashed\" present (proves JS fetch-patterns)",
+        "passed": true,
+        "evidence": "Signal \"_crashed\" found in output"
+      },
+      {
+        "text": "Signal \"row-lever\" present (proves HTML table-patterns)",
+        "passed": false,
+        "evidence": "Signal \"row-lever\" not found. Present signals: slab-hollow, on_x_y, skyFetch(), /sky/, _landed, _crashed, data-rack, data-slab-id, data-rankable, --seam"
+      },
+      {
+        "text": "Signal \"--seam\" present (proves CSS layout-patterns)",
+        "passed": true,
+        "evidence": "Signal \"--seam\" found in output"
+      }
+    ],
+    "summary": {
+      "passed": 11,
+      "failed": 3,
+      "total": 14,
+      "pass_rate": 0.7857142857142857
+    }
+  }
+}

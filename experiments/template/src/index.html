@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacts</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Contact Manager</h1>
+    </header>
+
+    <main class="layout">
+      <aside>
+        <h2>Add Contact</h2>
+        <form id="contact-form">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="field">
+            <label for="role">Role</label>
+            <select id="role" name="role">
+              <option value="developer">Developer</option>
+              <option value="designer">Designer</option>
+              <option value="manager">Manager</option>
+            </select>
+          </div>
+          <button type="submit">Add Contact</button>
+        </form>
+      </aside>
+
+      <section>
+        <h2>Contacts</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Role</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="contacts-body">
+            <tr>
+              <td colspan="4" class="empty-message">No contacts yet. Add one using the form.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <p>Contact Manager &mdash; A/B Experiment Project</p>
+    </footer>
+  </div>
+
+  <dialog id="delete-confirm">
+    <div class="dialog-body">
+      <h3>Delete Contact</h3>
+      <p>Are you sure you want to delete <strong id="delete-name"></strong>?</p>
+    </div>
+    <div class="dialog-actions">
+      <button id="cancel-delete">Cancel</button>
+      <button id="confirm-delete">Delete</button>
+    </div>
+  </dialog>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

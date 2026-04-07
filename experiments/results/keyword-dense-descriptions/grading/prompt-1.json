@@ -1,0 +1,54 @@
+{
+  "prompt_number": 1,
+  "prompt_text": "Add CSS animations to the contact table rows",
+  "control": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 17 events in 31.2s"
+      },
+      {
+        "text": "Signal \"data-zap\" present (proves CSS animation-patterns)",
+        "passed": true,
+        "evidence": "Signal \"data-zap\" found in output"
+      },
+      {
+        "text": "Signal \"--pulse\" present (proves CSS animation-patterns)",
+        "passed": true,
+        "evidence": "Signal \"--pulse\" found in output"
+      }
+    ],
+    "summary": {
+      "passed": 3,
+      "failed": 0,
+      "total": 3,
+      "pass_rate": 1
+    }
+  },
+  "treatment": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 17 events in 31.3s"
+      },
+      {
+        "text": "Signal \"data-zap\" present (proves CSS animation-patterns)",
+        "passed": true,
+        "evidence": "Signal \"data-zap\" found in output"
+      },
+      {
+        "text": "Signal \"--pulse\" present (proves CSS animation-patterns)",
+        "passed": true,
+        "evidence": "Signal \"--pulse\" found in output"
+      }
+    ],
+    "summary": {
+      "passed": 3,
+      "failed": 0,
+      "total": 3,
+      "pass_rate": 1
+    }
+  }
+}

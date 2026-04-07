@@ -1,0 +1,11 @@
+node_modules/
+.next/
+.vercel/
+out/
+*.tsbuildinfo
+
+experiments/.env
+experiments/ProjectA/
+experiments/ProjectB/
+
+.DS_Store

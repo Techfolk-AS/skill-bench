@@ -1,0 +1,16 @@
+{
+  "experiment": "gotchas-vs-rules-rerun",
+  "date": "2026-03-31",
+  "prompts_graded": 10,
+  "control": {
+    "passed": 40,
+    "total": 48,
+    "pass_rate": 0.8333333333333334
+  },
+  "treatment": {
+    "passed": 29,
+    "total": 48,
+    "pass_rate": 0.6041666666666666
+  },
+  "delta_pass_rate": -0.22916666666666674
+}

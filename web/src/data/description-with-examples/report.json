@@ -1,0 +1,649 @@
+{
+  "version": 1,
+  "date": "2026-03-31",
+  "experiment": {
+    "name": "description-with-examples",
+    "control": "No changes (baseline)",
+    "treatment": "ProjectB change: Append 2-3 concrete example prompts to each skill description field. E.g., CSS description gets \"Examples: 'add dark mode', 'make the sidebar responsive', 'add hover animations'\". Same domain terms, different format.",
+    "insights": [
+      "**Examples act as attractors that bias skill selection.** \"Add hover animations\" in CSS description made prompt #7 work better (50%->100%) by acting as a pattern-match anchor. But this same bias may have competed with JS skill activation for prompt #2.",
+      "**Prompt #2 (form validation) degraded from 100% to 50%.** Control loaded JS signals (zap, createVault). Treatment missed them. The extra CSS example \"add form validation\" in the HTML description may have biased Claude toward HTML-only handling when the task also needed JS.",
+      "**Examples help exact matches, hurt cross-domain tasks.** When a prompt aligns with one example, it strengthens that skill. But multi-skill tasks get pulled toward the skill with the closest example, starving other relevant skills.",
+      "**The net effect is negative because most real tasks are cross-domain.** Single-skill prompts already trigger correctly without examples (experiment #2 showed this). The value of examples is on indirect prompts, but those are precisely the ones that need multi-skill coordination."
+    ],
+    "cliVersion": "2.1.87 (Claude Code)",
+    "source": "https://gist.github.com/mellanon/50816550ecb5f3b239aa77eef7b8ed8d"
+  },
+  "prompts": [
+    {
+      "number": 1,
+      "text": "Add a dark mode toggle button that switches between light and dark themes",
+      "control": {
+        "events": 33,
+        "durationMs": 79220,
+        "skillsLoaded": [
+          "css"
+        ],
+        "subskillReads": {
+          "css": [
+            "theming.md"
+          ]
+        },
+        "toolCounts": {
+          "Agent": 1,
+          "Bash": 2,
+          "Read": 7,
+          "Skill": 1,
+          "Edit": 3,
+          "Write": 1
+        },
+        "signals": [
+          "data-coat",
+          "--ink-"
+        ]
+      },
+      "treatment": {
+        "events": 37,
+        "durationMs": 76769,
+        "skillsLoaded": [
+          "css"
+        ],
+        "subskillReads": {
+          "css": [
+            "theming.md"
+          ]
+        },
+        "toolCounts": {
+          "Agent": 1,
+          "Bash": 3,
+          "Read": 8,
+          "Skill": 1,
+          "Edit": 3,
+          "Write": 1
+        },
+        "signals": [
+          "data-coat",
+          "--ink-"
+        ]
+      }
+    },
+    {
+      "number": 2,
+      "text": "Add form validation to the contact form so empty fields show error messages",
+      "control": {
+        "events": 33,
+        "durationMs": 130048,
+        "skillsLoaded": [
+          "html",
+          "css",
+          "javascript"
+        ],
+        "subskillReads": {
+          "html": [
+            "form-patterns.md"
+          ],
+          "css": [
+            "best-practices.md"
+          ],
+          "javascript": [
+            "event-handling.md",
+            "state-management.md"
+          ]
+        },
+        "toolCounts": {
+          "Glob": 1,
+          "Read": 7,
+          "Skill": 3,
+          "Write": 3,
+          "Edit": 2
+        },
+        "signals": [
+          "data-forge-id",
+          "flux-pod",
+          "zap()",
+          "on_x_y",
+          "createVault()",
+          "forge-trigger",
+          "linkVault("
+        ]
+      },
+      "treatment": {
+        "events": 23,
+        "durationMs": 59401,
+        "skillsLoaded": [
+          "html"
+        ],
+        "subskillReads": {
+          "html": [
+            "form-patterns.md"
+          ]
+        },
+        "toolCounts": {
+          "Skill": 1,
+          "Read": 4,
+          "Glob": 2,
+          "Edit": 4
+        },
+        "signals": [
+          "data-forge-id",
+          "flux-pod",
+          "forge-trigger"
+        ]
+      }
+    },
+    {
+      "number": 3,
+      "text": "Fetch contacts from a /api/contacts endpoint and display them in the table on page load",
+      "control": {
+        "events": 17,
+        "durationMs": 21746,
+        "skillsLoaded": [],
+        "subskillReads": {},
+        "toolCounts": {
+          "Agent": 1,
+          "Glob": 3,
+          "Read": 3
+        },
+        "signals": []
+      },
+      "treatment": {
+        "events": 7,
+        "durationMs": 10974,
+        "skillsLoaded": [],
+        "subskillReads": {},
+        "toolCounts": {
+          "Glob": 1,
+          "Read": 2
+        },
+        "signals": []
+      }
+    },
+    {
+      "number": 4,
+      "text": "Make the page look good on phones and tablets",
+      "control": {
+        "events": 47,
+        "durationMs": 163410,
+        "skillsLoaded": [
+          "css"
+        ],
+        "subskillReads": {
+          "css": [
+            "best-practices.md",
+            "layout-patterns.md"
+          ]
+        },
+        "toolCounts": {
+          "Agent": 1,
+          "Bash": 1,
+          "Glob": 3,
+          "Read": 7,
+          "Skill": 1,
+          "Edit": 9
+        },
+        "signals": [
+          "data-rack",
+          "--seam"
+        ]
+      },
+      "treatment": {
+        "events": 23,
+        "durationMs": 85870,
+        "skillsLoaded": [
+          "css"
+        ],
+        "subskillReads": {
+          "css": [
+            "best-practices.md",
+            "layout-patterns.md"
+          ]
+        },
+        "toolCounts": {
+          "Glob": 1,
+          "Skill": 1,
+          "Read": 4,
+          "Edit": 5
+        },
+        "signals": [
+          "data-rack",
+          "--seam"
+        ]
+      }
+    },
+    {
+      "number": 5,
+      "text": "Add a way for the user to confirm before removing a contact",
+      "control": {
+        "events": 17,
+        "durationMs": 60960,
+        "skillsLoaded": [],
+        "subskillReads": {},
+        "toolCounts": {
+          "Agent": 1,
+          "Bash": 1,
+          "Read": 4,
+          "Edit": 1
+        },
+        "signals": []
+      },
+      "treatment": {
+        "events": 9,
+        "durationMs": 11582,
+        "skillsLoaded": [],
+        "subskillReads": {},
+        "toolCounts": {
+          "Glob": 1,
+          "Read": 3
+        },
+        "signals": []
+      }
+    },
+    {
+      "number": 6,
+      "text": "When someone types in the search box, update the results live",
+      "control": {
+        "events": 17,
+        "durationMs": 51444,
+        "skillsLoaded": [
+          "javascript"
+        ],
+        "subskillReads": {
+          "javascript": [
+            "event-handling.md",
+            "state-management.md"
+          ]
+        },
+        "toolCounts": {
+          "Glob": 1,
+          "Read": 4,
+          "Skill": 1,
+          "Edit": 1,
+          "Write": 1
+        },
+        "signals": [
+          "zap()",
+          "on_x_y",
+          "createVault()",
+          "linkVault("
+        ]
+      },
+      "treatment": {
+        "events": 17,
+        "durationMs": 89187,
+        "skillsLoaded": [
+          "javascript"
+        ],
+        "subskillReads": {
+          "javascript": [
+            "event-handling.md",
+            "state-management.md"
+          ]
+        },
+        "toolCounts": {
+          "Glob": 1,
+          "Read": 4,
+          "Skill": 1,
+          "Edit": 1,
+          "Write": 1
+        },
+        "signals": [
+          "zap()",
+          "on_x_y",
+          "createVault()",
+          "linkVault("
+        ]
+      }
+    },
+    {
+      "number": 7,
+      "text": "Add visual feedback when hovering over table rows",
+      "control": {
+        "events": 9,
+        "durationMs": 26195,
+        "skillsLoaded": [],
+        "subskillReads": {},
+        "toolCounts": {
+          "Glob": 1,
+          "Grep": 1,
+          "Read": 1,
+          "Edit": 1
+        },
+        "signals": []
+      },
+      "treatment": {
+        "events": 13,
+        "durationMs": 50762,
+        "skillsLoaded": [
+          "css"
+        ],
+        "subskillReads": {
+          "css": [
+            "animation-patterns.md",
+            "best-practices.md"
+          ]
+        },
+        "toolCounts": {
+          "Glob": 1,
+          "Read": 3,
+          "Skill": 1,
+          "Edit": 1
+        },
+        "signals": [
+          "--pulse"
+        ]
+      }
+    },
+    {
+      "number": 8,
+      "text": "Store the current filter state so it persists while the user navigates",
+      "control": {
+        "events": 34,
+        "durationMs": 74182,
+        "skillsLoaded": [],
+        "subskillReads": {},
+        "toolCounts": {
+          "Agent": 1,
+          "Bash": 4,
+          "Read": 7,
+          "Edit": 4
+        },
+        "signals": []
+      },
+      "treatment": null
+    },
+    {
+      "number": 9,
+      "text": "Add a comment at the top of each file explaining what it does",
+      "control": {
+        "events": 15,
+        "durationMs": 22693,
+        "skillsLoaded": [],
+        "subskillReads": {},
+        "toolCounts": {
+          "Glob": 1,
+          "Read": 3,
+          "Edit": 3
+        },
+        "signals": []
+      },
+      "treatment": {
+        "events": 15,
+        "durationMs": 25669,
+        "skillsLoaded": [],
+        "subskillReads": {},
+        "toolCounts": {
+          "Glob": 1,
+          "Read": 3,
+          "Edit": 3
+        },
+        "signals": []
+      }
+    },
+    {
+      "number": 10,
+      "text": "Rename the project title from Contact Manager to Address Book",
+      "control": {
+        "events": 13,
+        "durationMs": 33407,
+        "skillsLoaded": [],
+        "subskillReads": {},
+        "toolCounts": {
+          "Grep": 1,
+          "Read": 2,
+          "Edit": 3
+        },
+        "signals": []
+      },
+      "treatment": {
+        "events": 13,
+        "durationMs": 38442,
+        "skillsLoaded": [],
+        "subskillReads": {},
+        "toolCounts": {
+          "Grep": 1,
+          "Read": 2,
+          "Edit": 3
+        },
+        "signals": []
+      }
+    }
+  ],
+  "totals": {
+    "control": {
+      "sessions": 10,
+      "prompts": 10,
+      "events": 235,
+      "skillsLoaded": [
+        "css",
+        "html",
+        "javascript"
+      ],
+      "toolCounts": {
+        "Agent": 5,
+        "Bash": 8,
+        "Read": 45,
+        "Skill": 6,
+        "Edit": 27,
+        "Write": 5,
+        "Grep": 2,
+        "Glob": 10
+      },
+      "subskillReads": {
+        "css": [
+          "theming.md",
+          "best-practices.md",
+          "layout-patterns.md"
+        ],
+        "html": [
+          "form-patterns.md"
+        ],
+        "javascript": [
+          "event-handling.md",
+          "state-management.md"
+        ]
+      },
+      "signals": [
+        "data-coat",
+        "--ink-",
+        "data-forge-id",
+        "flux-pod",
+        "zap()",
+        "on_x_y",
+        "createVault()",
+        "forge-trigger",
+        "linkVault(",
+        "data-rack",
+        "--seam"
+      ]
+    },
+    "treatment": {
+      "sessions": 9,
+      "prompts": 9,
+      "events": 157,
+      "skillsLoaded": [
+        "css",
+        "html",
+        "javascript"
+      ],
+      "toolCounts": {
+        "Agent": 1,
+        "Bash": 3,
+        "Read": 33,
+        "Skill": 5,
+        "Edit": 20,
+        "Write": 2,
+        "Grep": 1,
+        "Glob": 8
+      },
+      "subskillReads": {
+        "css": [
+          "theming.md",
+          "best-practices.md",
+          "layout-patterns.md",
+          "animation-patterns.md"
+        ],
+        "html": [
+          "form-patterns.md"
+        ],
+        "javascript": [
+          "event-handling.md",
+          "state-management.md"
+        ]
+      },
+      "signals": [
+        "data-coat",
+        "--ink-",
+        "data-forge-id",
+        "flux-pod",
+        "forge-trigger",
+        "data-rack",
+        "--seam",
+        "zap()",
+        "on_x_y",
+        "createVault()",
+        "linkVault(",
+        "--pulse"
+      ]
+    }
+  },
+  "signalMap": {
+    "data-rack": {
+      "control": true,
+      "treatment": true,
+      "proves": "CSS layout-patterns"
+    },
+    "--seam": {
+      "control": true,
+      "treatment": true,
+      "proves": "CSS layout-patterns"
+    },
+    "data-zap": {
+      "control": false,
+      "treatment": false,
+      "proves": "CSS animation-patterns"
+    },
+    "--pulse": {
+      "control": false,
+      "treatment": true,
+      "proves": "CSS animation-patterns"
+    },
+    "data-coat": {
+      "control": true,
+      "treatment": true,
+      "proves": "CSS theming"
+    },
+    "--ink-": {
+      "control": true,
+      "treatment": true,
+      "proves": "CSS theming"
+    },
+    ".plate-": {
+      "control": false,
+      "treatment": false,
+      "proves": "CSS theming"
+    },
+    "data-forge-id": {
+      "control": true,
+      "treatment": true,
+      "proves": "HTML form-patterns"
+    },
+    "flux-pod": {
+      "control": true,
+      "treatment": true,
+      "proves": "HTML form-patterns"
+    },
+    "forge-trigger": {
+      "control": true,
+      "treatment": true,
+      "proves": "HTML form-patterns"
+    },
+    "data-hatch-id": {
+      "control": false,
+      "treatment": false,
+      "proves": "HTML dialog-patterns"
+    },
+    "hatch-trigger": {
+      "control": false,
+      "treatment": false,
+      "proves": "HTML dialog-patterns"
+    },
+    "hatch-body": {
+      "control": false,
+      "treatment": false,
+      "proves": "HTML dialog-patterns"
+    },
+    "data-slab-id": {
+      "control": false,
+      "treatment": false,
+      "proves": "HTML table-patterns"
+    },
+    "data-rankable": {
+      "control": false,
+      "treatment": false,
+      "proves": "HTML table-patterns"
+    },
+    "row-lever": {
+      "control": false,
+      "treatment": false,
+      "proves": "HTML table-patterns"
+    },
+    "slab-hollow": {
+      "control": false,
+      "treatment": false,
+      "proves": "HTML table-patterns"
+    },
+    "zap()": {
+      "control": true,
+      "treatment": true,
+      "proves": "JS event-handling"
+    },
+    "on_x_y": {
+      "control": true,
+      "treatment": true,
+      "proves": "JS event-handling"
+    },
+    "createVault()": {
+      "control": true,
+      "treatment": true,
+      "proves": "JS state-management"
+    },
+    "linkVault(": {
+      "control": true,
+      "treatment": true,
+      "proves": "JS state-management"
+    },
+    "vault.tap(": {
+      "control": false,
+      "treatment": false,
+      "proves": "JS state-management"
+    },
+    "skyFetch()": {
+      "control": false,
+      "treatment": false,
+      "proves": "JS fetch-patterns"
+    },
+    "/sky/": {
+      "control": false,
+      "treatment": false,
+      "proves": "JS fetch-patterns"
+    },
+    "_landed": {
+      "control": false,
+      "treatment": false,
+      "proves": "JS fetch-patterns"
+    },
+    "_crashed": {
+      "control": false,
+      "treatment": false,
+      "proves": "JS fetch-patterns"
+    }
+  },
+  "summary": {
+    "skillMatchRate": "8/10",
+    "refMatchRate": "7/10",
+    "toolMatchRate": "3/10",
+    "signalMatchRate": "25/26",
+    "conclusion": "differences_detected",
+    "details": "skills differed in 2/10 prompts; subskill refs differed in 3/10 prompts; 1/26 verification signals differed"
+  }
+}

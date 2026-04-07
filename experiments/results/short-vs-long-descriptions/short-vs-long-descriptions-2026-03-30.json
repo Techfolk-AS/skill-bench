@@ -1,0 +1,475 @@
+{
+  "version": 1,
+  "date": "2026-03-30",
+  "experiment": {
+    "name": "short-vs-long-descriptions",
+    "control": "No changes (baseline)",
+    "treatment": "ProjectB change: Shorten all three skill descriptions to generic ~30-36 char versions that remove domain terms (layout, animation, theming, forms, dialogs, events, state, fetch).",
+    "insights": [
+      "## Learnings"
+    ]
+  },
+  "prompts": [
+    {
+      "number": 1,
+      "text": "Add CSS animations to the contact table rows",
+      "control": {
+        "events": 15,
+        "durationMs": 25763,
+        "skillsLoaded": [
+          "css"
+        ],
+        "subskillReads": {
+          "css": [
+            "animation-patterns.md"
+          ]
+        },
+        "toolCounts": {
+          "Glob": 1,
+          "Skill": 1,
+          "Read": 3,
+          "Edit": 2
+        },
+        "signals": [
+          "data-zap",
+          "--pulse"
+        ]
+      },
+      "treatment": {
+        "events": 23,
+        "durationMs": 38715,
+        "skillsLoaded": [],
+        "subskillReads": {},
+        "toolCounts": {
+          "Agent": 1,
+          "Bash": 2,
+          "Read": 5,
+          "Edit": 2
+        },
+        "signals": []
+      }
+    },
+    {
+      "number": 3,
+      "text": "Add event listeners to handle clicking the delete button",
+      "control": {
+        "events": 23,
+        "durationMs": 26273,
+        "skillsLoaded": [],
+        "subskillReads": {},
+        "toolCounts": {
+          "Agent": 1,
+          "Bash": 3,
+          "Read": 6
+        },
+        "signals": []
+      },
+      "treatment": {
+        "events": 17,
+        "durationMs": 22330,
+        "skillsLoaded": [],
+        "subskillReads": {},
+        "toolCounts": {
+          "Agent": 1,
+          "Glob": 3,
+          "Read": 3
+        },
+        "signals": []
+      }
+    },
+    {
+      "number": 4,
+      "text": "Make the page look good on phones and tablets",
+      "control": null,
+      "treatment": {
+        "events": 23,
+        "durationMs": 47971,
+        "skillsLoaded": [],
+        "subskillReads": {},
+        "toolCounts": {
+          "Agent": 1,
+          "Bash": 1,
+          "Glob": 1,
+          "Read": 6,
+          "Edit": 1
+        },
+        "signals": []
+      }
+    },
+    {
+      "number": 5,
+      "text": "Add a way for the user to confirm before removing a contact",
+      "control": {
+        "events": 19,
+        "durationMs": 52961,
+        "skillsLoaded": [],
+        "subskillReads": {},
+        "toolCounts": {
+          "Agent": 1,
+          "Bash": 1,
+          "Read": 4,
+          "Glob": 1,
+          "Edit": 1
+        },
+        "signals": []
+      },
+      "treatment": {
+        "events": 29,
+        "durationMs": 38463,
+        "skillsLoaded": [],
+        "subskillReads": {},
+        "toolCounts": {
+          "Agent": 1,
+          "Bash": 3,
+          "Read": 8,
+          "Grep": 1
+        },
+        "signals": []
+      }
+    },
+    {
+      "number": 6,
+      "text": "When someone types in the search box, update the results live",
+      "control": {
+        "events": 21,
+        "durationMs": 57045,
+        "skillsLoaded": [
+          "javascript"
+        ],
+        "subskillReads": {
+          "javascript": [
+            "event-handling.md",
+            "state-management.md"
+          ]
+        },
+        "toolCounts": {
+          "Glob": 1,
+          "Read": 5,
+          "Skill": 1,
+          "Edit": 3
+        },
+        "signals": [
+          "zap()",
+          "on_x_y"
+        ]
+      },
+      "treatment": {
+        "events": 31,
+        "durationMs": 52293,
+        "skillsLoaded": [],
+        "subskillReads": {},
+        "toolCounts": {
+          "Agent": 1,
+          "Bash": 2,
+          "Read": 6,
+          "Edit": 5
+        },
+        "signals": []
+      }
+    },
+    {
+      "number": 7,
+      "text": "Add visual feedback when hovering over table rows",
+      "control": {
+        "events": 13,
+        "durationMs": 25668,
+        "skillsLoaded": [
+          "css"
+        ],
+        "subskillReads": {
+          "css": [
+            "animation-patterns.md",
+            "best-practices.md"
+          ]
+        },
+        "toolCounts": {
+          "Glob": 1,
+          "Skill": 1,
+          "Read": 3,
+          "Edit": 1
+        },
+        "signals": [
+          "--pulse"
+        ]
+      },
+      "treatment": {
+        "events": 7,
+        "durationMs": 12849,
+        "skillsLoaded": [],
+        "subskillReads": {},
+        "toolCounts": {
+          "Glob": 1,
+          "Read": 1,
+          "Edit": 1
+        },
+        "signals": []
+      }
+    },
+    {
+      "number": 8,
+      "text": "Store the current filter state so it persists while the user navigates",
+      "control": null,
+      "treatment": {
+        "events": 31,
+        "durationMs": 67561,
+        "skillsLoaded": [],
+        "subskillReads": {},
+        "toolCounts": {
+          "Agent": 1,
+          "Bash": 2,
+          "Read": 7,
+          "Edit": 4
+        },
+        "signals": []
+      }
+    },
+    {
+      "number": 9,
+      "text": "Add a comment at the top of each file explaining what it does",
+      "control": {
+        "events": 15,
+        "durationMs": 12758,
+        "skillsLoaded": [],
+        "subskillReads": {},
+        "toolCounts": {
+          "Glob": 1,
+          "Read": 3,
+          "Edit": 3
+        },
+        "signals": []
+      },
+      "treatment": {
+        "events": 15,
+        "durationMs": 15408,
+        "skillsLoaded": [],
+        "subskillReads": {},
+        "toolCounts": {
+          "Glob": 1,
+          "Read": 3,
+          "Edit": 3
+        },
+        "signals": []
+      }
+    },
+    {
+      "number": 10,
+      "text": "Rename the project title from Contact Manager to Address Book",
+      "control": {
+        "events": 13,
+        "durationMs": 19847,
+        "skillsLoaded": [],
+        "subskillReads": {},
+        "toolCounts": {
+          "Grep": 1,
+          "Read": 2,
+          "Edit": 3
+        },
+        "signals": []
+      },
+      "treatment": {
+        "events": 9,
+        "durationMs": 15226,
+        "skillsLoaded": [],
+        "subskillReads": {},
+        "toolCounts": {
+          "Grep": 1,
+          "Read": 1,
+          "Edit": 2
+        },
+        "signals": []
+      }
+    }
+  ],
+  "totals": {
+    "control": {
+      "sessions": 7,
+      "prompts": 7,
+      "events": 119,
+      "skillsLoaded": [
+        "css",
+        "javascript"
+      ],
+      "toolCounts": {
+        "Glob": 5,
+        "Skill": 3,
+        "Read": 26,
+        "Edit": 13,
+        "Grep": 1,
+        "Agent": 2,
+        "Bash": 4
+      },
+      "subskillReads": {
+        "css": [
+          "animation-patterns.md",
+          "best-practices.md"
+        ],
+        "javascript": [
+          "event-handling.md",
+          "state-management.md"
+        ]
+      },
+      "signals": [
+        "data-zap",
+        "--pulse",
+        "zap()",
+        "on_x_y"
+      ]
+    },
+    "treatment": {
+      "sessions": 9,
+      "prompts": 9,
+      "events": 185,
+      "skillsLoaded": [],
+      "toolCounts": {
+        "Agent": 6,
+        "Bash": 10,
+        "Read": 40,
+        "Edit": 18,
+        "Grep": 2,
+        "Glob": 6
+      },
+      "subskillReads": {},
+      "signals": []
+    }
+  },
+  "signalMap": {
+    "data-rack": {
+      "control": false,
+      "treatment": false,
+      "proves": "CSS layout-patterns"
+    },
+    "--seam": {
+      "control": false,
+      "treatment": false,
+      "proves": "CSS layout-patterns"
+    },
+    "data-zap": {
+      "control": true,
+      "treatment": false,
+      "proves": "CSS animation-patterns"
+    },
+    "--pulse": {
+      "control": true,
+      "treatment": false,
+      "proves": "CSS animation-patterns"
+    },
+    "data-coat": {
+      "control": false,
+      "treatment": false,
+      "proves": "CSS theming"
+    },
+    "--ink-": {
+      "control": false,
+      "treatment": false,
+      "proves": "CSS theming"
+    },
+    ".plate-": {
+      "control": false,
+      "treatment": false,
+      "proves": "CSS theming"
+    },
+    "data-forge-id": {
+      "control": false,
+      "treatment": false,
+      "proves": "HTML form-patterns"
+    },
+    "flux-pod": {
+      "control": false,
+      "treatment": false,
+      "proves": "HTML form-patterns"
+    },
+    "forge-trigger": {
+      "control": false,
+      "treatment": false,
+      "proves": "HTML form-patterns"
+    },
+    "data-hatch-id": {
+      "control": false,
+      "treatment": false,
+      "proves": "HTML dialog-patterns"
+    },
+    "hatch-trigger": {
+      "control": false,
+      "treatment": false,
+      "proves": "HTML dialog-patterns"
+    },
+    "hatch-body": {
+      "control": false,
+      "treatment": false,
+      "proves": "HTML dialog-patterns"
+    },
+    "data-slab-id": {
+      "control": false,
+      "treatment": false,
+      "proves": "HTML table-patterns"
+    },
+    "data-rankable": {
+      "control": false,
+      "treatment": false,
+      "proves": "HTML table-patterns"
+    },
+    "row-lever": {
+      "control": false,
+      "treatment": false,
+      "proves": "HTML table-patterns"
+    },
+    "slab-hollow": {
+      "control": false,
+      "treatment": false,
+      "proves": "HTML table-patterns"
+    },
+    "zap()": {
+      "control": true,
+      "treatment": false,
+      "proves": "JS event-handling"
+    },
+    "on_x_y": {
+      "control": true,
+      "treatment": false,
+      "proves": "JS event-handling"
+    },
+    "createVault()": {
+      "control": false,
+      "treatment": false,
+      "proves": "JS state-management"
+    },
+    "linkVault(": {
+      "control": false,
+      "treatment": false,
+      "proves": "JS state-management"
+    },
+    "vault.tap(": {
+      "control": false,
+      "treatment": false,
+      "proves": "JS state-management"
+    },
+    "skyFetch()": {
+      "control": false,
+      "treatment": false,
+      "proves": "JS fetch-patterns"
+    },
+    "/sky/": {
+      "control": false,
+      "treatment": false,
+      "proves": "JS fetch-patterns"
+    },
+    "_landed": {
+      "control": false,
+      "treatment": false,
+      "proves": "JS fetch-patterns"
+    },
+    "_crashed": {
+      "control": false,
+      "treatment": false,
+      "proves": "JS fetch-patterns"
+    }
+  },
+  "summary": {
+    "skillMatchRate": "6/9",
+    "refMatchRate": "4/9",
+    "toolMatchRate": "1/9",
+    "signalMatchRate": "22/26",
+    "conclusion": "differences_detected",
+    "details": "skills differed in 3/9 prompts; subskill refs differed in 5/9 prompts; 4/26 verification signals differed"
+  }
+}

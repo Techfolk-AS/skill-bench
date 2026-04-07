@@ -1,0 +1,54 @@
+{
+  "prompt_number": 4,
+  "prompt_text": "Make the page look good on phones and tablets",
+  "control": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 45 events in 107.4s"
+      },
+      {
+        "text": "Signal \"data-rack\" present (proves CSS layout-patterns)",
+        "passed": true,
+        "evidence": "Signal \"data-rack\" found in output"
+      },
+      {
+        "text": "Signal \"--seam\" present (proves CSS layout-patterns)",
+        "passed": true,
+        "evidence": "Signal \"--seam\" found in output"
+      }
+    ],
+    "summary": {
+      "passed": 3,
+      "failed": 0,
+      "total": 3,
+      "pass_rate": 1
+    }
+  },
+  "treatment": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 41 events in 86.1s"
+      },
+      {
+        "text": "Signal \"data-rack\" present (proves CSS layout-patterns)",
+        "passed": true,
+        "evidence": "Signal \"data-rack\" found in output"
+      },
+      {
+        "text": "Signal \"--seam\" present (proves CSS layout-patterns)",
+        "passed": true,
+        "evidence": "Signal \"--seam\" found in output"
+      }
+    ],
+    "summary": {
+      "passed": 3,
+      "failed": 0,
+      "total": 3,
+      "pass_rate": 1
+    }
+  }
+}

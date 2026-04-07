@@ -1,0 +1,64 @@
+{
+  "prompt_number": 9,
+  "prompt_text": "Add a comment at the top of each file explaining what it does",
+  "control": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 15 events in 22.7s"
+      },
+      {
+        "text": "Signal \"data-rack\" correctly absent (no leakage)",
+        "passed": true,
+        "evidence": "Signal \"data-rack\" correctly absent"
+      },
+      {
+        "text": "Signal \"--seam\" correctly absent (no leakage)",
+        "passed": true,
+        "evidence": "Signal \"--seam\" correctly absent"
+      },
+      {
+        "text": "Signal \"data-zap\" correctly absent (no leakage)",
+        "passed": true,
+        "evidence": "Signal \"data-zap\" correctly absent"
+      }
+    ],
+    "summary": {
+      "passed": 4,
+      "failed": 0,
+      "total": 4,
+      "pass_rate": 1
+    }
+  },
+  "treatment": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 15 events in 25.7s"
+      },
+      {
+        "text": "Signal \"data-rack\" correctly absent (no leakage)",
+        "passed": true,
+        "evidence": "Signal \"data-rack\" correctly absent"
+      },
+      {
+        "text": "Signal \"--seam\" correctly absent (no leakage)",
+        "passed": true,
+        "evidence": "Signal \"--seam\" correctly absent"
+      },
+      {
+        "text": "Signal \"data-zap\" correctly absent (no leakage)",
+        "passed": true,
+        "evidence": "Signal \"data-zap\" correctly absent"
+      }
+    ],
+    "summary": {
+      "passed": 4,
+      "failed": 0,
+      "total": 4,
+      "pass_rate": 1
+    }
+  }
+}

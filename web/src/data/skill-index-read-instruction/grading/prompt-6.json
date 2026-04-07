@@ -1,0 +1,54 @@
+{
+  "prompt_number": 6,
+  "prompt_text": "Add a fade-in animation when new contacts appear in the table",
+  "control": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 15 events in 32.1s"
+      },
+      {
+        "text": "Signal \"data-zap\" present (proves CSS animation-patterns)",
+        "passed": false,
+        "evidence": "Signal \"data-zap\" not found. Present signals: none"
+      },
+      {
+        "text": "Signal \"--pulse\" present (proves CSS animation-patterns)",
+        "passed": false,
+        "evidence": "Signal \"--pulse\" not found. Present signals: none"
+      }
+    ],
+    "summary": {
+      "passed": 1,
+      "failed": 2,
+      "total": 3,
+      "pass_rate": 0.3333333333333333
+    }
+  },
+  "treatment": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 17 events in 35.7s"
+      },
+      {
+        "text": "Signal \"data-zap\" present (proves CSS animation-patterns)",
+        "passed": true,
+        "evidence": "Signal \"data-zap\" found in output"
+      },
+      {
+        "text": "Signal \"--pulse\" present (proves CSS animation-patterns)",
+        "passed": true,
+        "evidence": "Signal \"--pulse\" found in output"
+      }
+    ],
+    "summary": {
+      "passed": 3,
+      "failed": 0,
+      "total": 3,
+      "pass_rate": 1
+    }
+  }
+}

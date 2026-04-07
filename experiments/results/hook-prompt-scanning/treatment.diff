@@ -1,0 +1,19 @@
+--- ProjectA/.claude/settings.json	2026-03-30 12:35:39
++++ ProjectB/.claude/settings.json	2026-03-30 12:41:09
+@@ -15,6 +15,15 @@
+             "async": true
+           }
+         ]
++      },
++      {
++        "matcher": "",
++        "hooks": [
++          {
++            "type": "command",
++            "command": "npx tsx \"$CLAUDE_PROJECT_DIR/.claude/hooks/prompt-scanner.ts\" \"$CLAUDE_HOOK_INPUT\""
++          }
++        ]
+       }
+     ],
+     "SessionStart": [
+Only in ProjectB/.claude/hooks: prompt-scanner.ts

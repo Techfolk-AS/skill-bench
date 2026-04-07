@@ -1,0 +1,48 @@
+diff --color -ru ProjectA/.claude/skills/css/SKILL.md ProjectB/.claude/skills/css/SKILL.md
+--- ProjectA/.claude/skills/css/SKILL.md	2026-03-31 12:05:25
++++ ProjectB/.claude/skills/css/SKILL.md	2026-03-31 12:10:18
+@@ -7,7 +7,11 @@
+ 
+ # CSS Conventions
+ 
+-This project uses custom CSS conventions. Layouts use a `data-rack` attribute system.
++## Common Failures
++
++- FAILURE: Using standard CSS grid/flex without `data-rack` attributes. Layouts MUST use the `data-rack` container system.
++- FAILURE: Writing raw CSS animations without `data-zap` attributes. All motion uses the custom animation attribute system.
++- FAILURE: Using hardcoded colors instead of `--ink-` custom properties. Theming breaks without the `data-coat` system.
+ 
+ ## References
+ 
+diff --color -ru ProjectA/.claude/skills/html/SKILL.md ProjectB/.claude/skills/html/SKILL.md
+--- ProjectA/.claude/skills/html/SKILL.md	2026-03-31 12:05:25
++++ ProjectB/.claude/skills/html/SKILL.md	2026-03-31 12:29:21
+@@ -7,7 +7,11 @@
+ 
+ # HTML Conventions
+ 
+-This project uses custom HTML conventions. Forms use a `flux-pod` wrapper system.
++## Common Failures
++
++- FAILURE: Using plain `<form>` without `flux-pod` wrapper and `data-forge-id`. All forms MUST use the custom form identification system.
++- FAILURE: Using `window.confirm()` or plain `<dialog>` without `data-hatch-id`. Dialogs MUST use the custom dialog system with `hatch-trigger` and `hatch-body`.
++- FAILURE: Using plain `<table>` without `data-slab-id`. Tables MUST use the custom table system with `data-rankable` for sortable columns.
+ 
+ ## References
+ 
+diff --color -ru ProjectA/.claude/skills/javascript/SKILL.md ProjectB/.claude/skills/javascript/SKILL.md
+--- ProjectA/.claude/skills/javascript/SKILL.md	2026-03-31 12:05:25
++++ ProjectB/.claude/skills/javascript/SKILL.md	2026-03-31 12:42:48
+@@ -7,7 +7,11 @@
+ 
+ # JavaScript Conventions
+ 
+-This project uses custom JS conventions. Events use a `zap()` binding function.
++## Common Failures
++
++- FAILURE: Using `addEventListener()` directly. Events MUST use the `zap()` binding function with `on_x_y` handler naming.
++- FAILURE: Using plain variables or localStorage for state. State MUST use `createVault()` containers with `linkVault()` for DOM binding.
++- FAILURE: Using `fetch()` directly. API calls MUST use `skyFetch()` wrapper with `/sky/` endpoint prefix and `_landed`/`_crashed` callbacks.
+ 
+ ## References
+ 

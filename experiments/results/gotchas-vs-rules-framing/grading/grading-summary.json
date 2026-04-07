@@ -1,0 +1,16 @@
+{
+  "experiment": "gotchas-vs-rules-framing",
+  "date": "2026-03-31",
+  "prompts_graded": 9,
+  "control": {
+    "passed": 37,
+    "total": 37,
+    "pass_rate": 1
+  },
+  "treatment": {
+    "passed": 20,
+    "total": 37,
+    "pass_rate": 0.5405405405405406
+  },
+  "delta_pass_rate": -0.45945945945945943
+}

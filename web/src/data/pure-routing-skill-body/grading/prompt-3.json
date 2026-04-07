@@ -1,0 +1,64 @@
+{
+  "prompt_number": 3,
+  "prompt_text": "Add form validation to the contact form so empty fields show error messages",
+  "control": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 27 events in 61.5s"
+      },
+      {
+        "text": "Signal \"flux-pod\" present (proves HTML form-patterns)",
+        "passed": true,
+        "evidence": "Signal \"flux-pod\" found in output"
+      },
+      {
+        "text": "Signal \"data-forge-id\" present (proves HTML form-patterns)",
+        "passed": true,
+        "evidence": "Signal \"data-forge-id\" found in output"
+      },
+      {
+        "text": "Signal \"forge-trigger\" present (proves HTML form-patterns)",
+        "passed": true,
+        "evidence": "Signal \"forge-trigger\" found in output"
+      }
+    ],
+    "summary": {
+      "passed": 4,
+      "failed": 0,
+      "total": 4,
+      "pass_rate": 1
+    }
+  },
+  "treatment": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 19 events in 49.5s"
+      },
+      {
+        "text": "Signal \"flux-pod\" present (proves HTML form-patterns)",
+        "passed": true,
+        "evidence": "Signal \"flux-pod\" found in output"
+      },
+      {
+        "text": "Signal \"data-forge-id\" present (proves HTML form-patterns)",
+        "passed": true,
+        "evidence": "Signal \"data-forge-id\" found in output"
+      },
+      {
+        "text": "Signal \"forge-trigger\" present (proves HTML form-patterns)",
+        "passed": true,
+        "evidence": "Signal \"forge-trigger\" found in output"
+      }
+    ],
+    "summary": {
+      "passed": 4,
+      "failed": 0,
+      "total": 4,
+      "pass_rate": 1
+    }
+  }
+}

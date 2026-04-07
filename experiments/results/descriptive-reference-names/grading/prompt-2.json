@@ -1,0 +1,64 @@
+{
+  "prompt_number": 2,
+  "prompt_text": "Add a dark mode toggle button that switches between light and dark themes",
+  "control": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 35 events in 62.8s"
+      },
+      {
+        "text": "Signal \"data-rack\" correctly absent (no leakage)",
+        "passed": true,
+        "evidence": "Signal \"data-rack\" correctly absent"
+      },
+      {
+        "text": "Signal \"--seam\" correctly absent (no leakage)",
+        "passed": true,
+        "evidence": "Signal \"--seam\" correctly absent"
+      },
+      {
+        "text": "Signal \"data-zap\" correctly absent (no leakage)",
+        "passed": true,
+        "evidence": "Signal \"data-zap\" correctly absent"
+      }
+    ],
+    "summary": {
+      "passed": 4,
+      "failed": 0,
+      "total": 4,
+      "pass_rate": 1
+    }
+  },
+  "treatment": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 29 events in 49.5s"
+      },
+      {
+        "text": "Signal \"data-rack\" correctly absent (no leakage)",
+        "passed": true,
+        "evidence": "Signal \"data-rack\" correctly absent"
+      },
+      {
+        "text": "Signal \"--seam\" correctly absent (no leakage)",
+        "passed": true,
+        "evidence": "Signal \"--seam\" correctly absent"
+      },
+      {
+        "text": "Signal \"data-zap\" correctly absent (no leakage)",
+        "passed": true,
+        "evidence": "Signal \"data-zap\" correctly absent"
+      }
+    ],
+    "summary": {
+      "passed": 4,
+      "failed": 0,
+      "total": 4,
+      "pass_rate": 1
+    }
+  }
+}

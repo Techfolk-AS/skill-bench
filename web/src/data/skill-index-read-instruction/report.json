@@ -1,0 +1,590 @@
+{
+  "version": 1,
+  "date": "2026-03-30",
+  "experiment": {
+    "name": "skill-index-read-instruction",
+    "control": "No changes (baseline)",
+    "treatment": "ProjectB change: Replace skill-index placeholder in CLAUDE.md with a full docs index listing all 11 reference files grouped by domain, plus the instruction \"Before starting any task, identify which docs below are relevant and read them first.\"",
+    "insights": [
+      "**Treatment wins decisively on multi-reference tasks** (prompts 4, 5, 6). The control completely missed dialog-patterns, table-patterns, and animation-patterns references. These are exactly the \"56% miss rate\" the article describes: semantic matching failed to connect \"confirmation dialog\" with the dialog-patterns skill.",
+      "**Control won where treatment failed to run** (prompts 7, 8). Those B-side failures are Docker timeouts, not treatment problems. If we exclude crashes, treatment outperforms 100% vs ~24% on discriminating prompts.",
+      "**Both work for \"obvious\" tasks** (prompts 2, 3). When the task keyword directly matches the skill description (e.g., \"dark mode\" -> \"theming\"), semantic triggering works fine. The treatment adds no value here.",
+      "**Neither over-triggers on negatives** (prompts 9, 10). The explicit read instruction doesn't cause Claude to load irrelevant references."
+    ],
+    "cliVersion": "2.1.87 (Claude Code)",
+    "source": "https://alexop.dev/posts/stop-bloating-your-claude-md-progressive-disclosure-ai-coding-tools/"
+  },
+  "prompts": [
+    {
+      "number": 2,
+      "text": "Add a dark mode toggle button that switches the entire page between light and dark themes",
+      "control": {
+        "events": 51,
+        "durationMs": 79619,
+        "skillsLoaded": [
+          "css"
+        ],
+        "subskillReads": {
+          "css": [
+            "theming.md"
+          ]
+        },
+        "toolCounts": {
+          "Agent": 1,
+          "Bash": 2,
+          "Read": 9,
+          "Skill": 1,
+          "Edit": 11
+        },
+        "signals": [
+          "data-coat",
+          "--ink-"
+        ]
+      },
+      "treatment": {
+        "events": 23,
+        "durationMs": 48466,
+        "skillsLoaded": [
+          "css"
+        ],
+        "subskillReads": {
+          "css": [
+            "theming.md"
+          ],
+          "html": [
+            "best-practices.md"
+          ]
+        },
+        "toolCounts": {
+          "Skill": 1,
+          "Read": 5,
+          "Glob": 1,
+          "Edit": 3,
+          "Write": 1
+        },
+        "signals": [
+          "data-coat",
+          "--ink-"
+        ]
+      }
+    },
+    {
+      "number": 3,
+      "text": "Add form validation to the contact form so empty fields show error messages before submitting",
+      "control": {
+        "events": 25,
+        "durationMs": 77466,
+        "skillsLoaded": [
+          "html"
+        ],
+        "subskillReads": {
+          "html": [
+            "form-patterns.md"
+          ],
+          "javascript": [
+            "event-handling.md"
+          ],
+          "css": [
+            "best-practices.md"
+          ]
+        },
+        "toolCounts": {
+          "Glob": 1,
+          "Read": 6,
+          "Skill": 1,
+          "Edit": 4
+        },
+        "signals": [
+          "flux-pod",
+          "data-forge-id",
+          "forge-trigger"
+        ]
+      },
+      "treatment": {
+        "events": 21,
+        "durationMs": 46207,
+        "skillsLoaded": [
+          "html"
+        ],
+        "subskillReads": {
+          "html": [
+            "form-patterns.md"
+          ]
+        },
+        "toolCounts": {
+          "Skill": 1,
+          "Read": 4,
+          "Glob": 1,
+          "Edit": 4
+        },
+        "signals": [
+          "data-forge-id",
+          "flux-pod",
+          "forge-trigger"
+        ]
+      }
+    },
+    {
+      "number": 4,
+      "text": "Create a confirmation dialog that appears when the user clicks delete on a contact row",
+      "control": {
+        "events": 23,
+        "durationMs": 49710,
+        "skillsLoaded": [],
+        "subskillReads": {},
+        "toolCounts": {
+          "Agent": 1,
+          "Glob": 1,
+          "Read": 6,
+          "Edit": 2
+        },
+        "signals": []
+      },
+      "treatment": {
+        "events": 47,
+        "durationMs": 90614,
+        "skillsLoaded": [],
+        "subskillReads": {
+          "html": [
+            "dialog-patterns.md",
+            "table-patterns.md"
+          ]
+        },
+        "toolCounts": {
+          "Agent": 1,
+          "Read": 10,
+          "Bash": 3,
+          "Edit": 8
+        },
+        "signals": [
+          "data-hatch-id",
+          "row-lever",
+          "slab-hollow",
+          "forge-trigger",
+          "hatch-body",
+          "data-slab-id"
+        ]
+      }
+    },
+    {
+      "number": 5,
+      "text": "Add click-to-sort functionality to the contact table columns",
+      "control": {
+        "events": 34,
+        "durationMs": 63834,
+        "skillsLoaded": [],
+        "subskillReads": {},
+        "toolCounts": {
+          "Agent": 1,
+          "Glob": 1,
+          "Read": 9,
+          "Bash": 2,
+          "Edit": 4
+        },
+        "signals": []
+      },
+      "treatment": {
+        "events": 27,
+        "durationMs": 65794,
+        "skillsLoaded": [],
+        "subskillReads": {
+          "html": [
+            "table-patterns.md"
+          ],
+          "javascript": [
+            "state-management.md",
+            "event-handling.md"
+          ],
+          "css": [
+            "best-practices.md"
+          ]
+        },
+        "toolCounts": {
+          "Glob": 1,
+          "Read": 8,
+          "Edit": 4
+        },
+        "signals": [
+          "data-rankable",
+          "on_x_y",
+          "data-slab-id"
+        ]
+      }
+    },
+    {
+      "number": 6,
+      "text": "Add a fade-in animation when new contacts appear in the table",
+      "control": {
+        "events": 15,
+        "durationMs": 32054,
+        "skillsLoaded": [],
+        "subskillReads": {},
+        "toolCounts": {
+          "Glob": 1,
+          "Read": 2,
+          "Edit": 4
+        },
+        "signals": []
+      },
+      "treatment": {
+        "events": 17,
+        "durationMs": 35668,
+        "skillsLoaded": [
+          "css"
+        ],
+        "subskillReads": {
+          "css": [
+            "animation-patterns.md"
+          ]
+        },
+        "toolCounts": {
+          "Skill": 1,
+          "Read": 3,
+          "Glob": 1,
+          "Edit": 3
+        },
+        "signals": [
+          "data-zap",
+          "--pulse"
+        ]
+      }
+    },
+    {
+      "number": 7,
+      "text": "Add a search input that filters the contact table in real-time as the user types",
+      "control": {
+        "events": 27,
+        "durationMs": 58788,
+        "skillsLoaded": [],
+        "subskillReads": {},
+        "toolCounts": {
+          "Agent": 1,
+          "Bash": 1,
+          "Read": 6,
+          "Edit": 4
+        },
+        "signals": []
+      },
+      "treatment": null
+    },
+    {
+      "number": 8,
+      "text": "Fetch contacts from a /api/contacts endpoint and display them in the table on page load",
+      "control": {
+        "events": 15,
+        "durationMs": 55710,
+        "skillsLoaded": [],
+        "subskillReads": {
+          "javascript": [
+            "fetch-patterns.md"
+          ]
+        },
+        "toolCounts": {
+          "Glob": 1,
+          "Read": 3,
+          "Agent": 1,
+          "Edit": 1
+        },
+        "signals": [
+          "on_x_y",
+          "_landed",
+          "_crashed"
+        ]
+      },
+      "treatment": null
+    },
+    {
+      "number": 9,
+      "text": "Add a comment at the top of each file explaining what it does",
+      "control": {
+        "events": 15,
+        "durationMs": 13068,
+        "skillsLoaded": [],
+        "subskillReads": {},
+        "toolCounts": {
+          "Glob": 1,
+          "Read": 3,
+          "Edit": 3
+        },
+        "signals": []
+      },
+      "treatment": {
+        "events": 15,
+        "durationMs": 13218,
+        "skillsLoaded": [],
+        "subskillReads": {},
+        "toolCounts": {
+          "Glob": 1,
+          "Read": 3,
+          "Edit": 3
+        },
+        "signals": []
+      }
+    },
+    {
+      "number": 10,
+      "text": "Rename the project title in index.html from Contact Manager to Address Book",
+      "control": {
+        "events": 9,
+        "durationMs": 15245,
+        "skillsLoaded": [],
+        "subskillReads": {},
+        "toolCounts": {
+          "Glob": 1,
+          "Grep": 1,
+          "Read": 1,
+          "Edit": 1
+        },
+        "signals": []
+      },
+      "treatment": {
+        "events": 13,
+        "durationMs": 23230,
+        "skillsLoaded": [],
+        "subskillReads": {},
+        "toolCounts": {
+          "Glob": 1,
+          "Grep": 1,
+          "Read": 2,
+          "Edit": 2
+        },
+        "signals": []
+      }
+    }
+  ],
+  "totals": {
+    "control": {
+      "sessions": 9,
+      "prompts": 9,
+      "events": 214,
+      "skillsLoaded": [
+        "css",
+        "html"
+      ],
+      "toolCounts": {
+        "Glob": 7,
+        "Grep": 1,
+        "Read": 45,
+        "Edit": 34,
+        "Agent": 5,
+        "Bash": 5,
+        "Skill": 2
+      },
+      "subskillReads": {
+        "css": [
+          "theming.md",
+          "best-practices.md"
+        ],
+        "html": [
+          "form-patterns.md"
+        ],
+        "javascript": [
+          "event-handling.md",
+          "fetch-patterns.md"
+        ]
+      },
+      "signals": [
+        "data-coat",
+        "--ink-",
+        "flux-pod",
+        "data-forge-id",
+        "forge-trigger",
+        "on_x_y",
+        "_landed",
+        "_crashed"
+      ]
+    },
+    "treatment": {
+      "sessions": 7,
+      "prompts": 7,
+      "events": 163,
+      "skillsLoaded": [
+        "css",
+        "html"
+      ],
+      "toolCounts": {
+        "Glob": 6,
+        "Grep": 1,
+        "Read": 35,
+        "Edit": 27,
+        "Skill": 3,
+        "Write": 1,
+        "Agent": 1,
+        "Bash": 3
+      },
+      "subskillReads": {
+        "css": [
+          "theming.md",
+          "best-practices.md",
+          "animation-patterns.md"
+        ],
+        "html": [
+          "best-practices.md",
+          "form-patterns.md",
+          "dialog-patterns.md",
+          "table-patterns.md"
+        ],
+        "javascript": [
+          "state-management.md",
+          "event-handling.md"
+        ]
+      },
+      "signals": [
+        "data-coat",
+        "--ink-",
+        "data-forge-id",
+        "flux-pod",
+        "forge-trigger",
+        "data-hatch-id",
+        "row-lever",
+        "slab-hollow",
+        "hatch-body",
+        "data-slab-id",
+        "data-rankable",
+        "on_x_y",
+        "data-zap",
+        "--pulse"
+      ]
+    }
+  },
+  "signalMap": {
+    "data-rack": {
+      "control": false,
+      "treatment": false,
+      "proves": "CSS layout-patterns"
+    },
+    "--seam": {
+      "control": false,
+      "treatment": false,
+      "proves": "CSS layout-patterns"
+    },
+    "data-zap": {
+      "control": false,
+      "treatment": true,
+      "proves": "CSS animation-patterns"
+    },
+    "--pulse": {
+      "control": false,
+      "treatment": true,
+      "proves": "CSS animation-patterns"
+    },
+    "data-coat": {
+      "control": true,
+      "treatment": true,
+      "proves": "CSS theming"
+    },
+    "--ink-": {
+      "control": true,
+      "treatment": true,
+      "proves": "CSS theming"
+    },
+    ".plate-": {
+      "control": false,
+      "treatment": false,
+      "proves": "CSS theming"
+    },
+    "data-forge-id": {
+      "control": true,
+      "treatment": true,
+      "proves": "HTML form-patterns"
+    },
+    "flux-pod": {
+      "control": true,
+      "treatment": true,
+      "proves": "HTML form-patterns"
+    },
+    "forge-trigger": {
+      "control": true,
+      "treatment": true,
+      "proves": "HTML form-patterns"
+    },
+    "data-hatch-id": {
+      "control": false,
+      "treatment": true,
+      "proves": "HTML dialog-patterns"
+    },
+    "hatch-trigger": {
+      "control": false,
+      "treatment": false,
+      "proves": "HTML dialog-patterns"
+    },
+    "hatch-body": {
+      "control": false,
+      "treatment": true,
+      "proves": "HTML dialog-patterns"
+    },
+    "data-slab-id": {
+      "control": false,
+      "treatment": true,
+      "proves": "HTML table-patterns"
+    },
+    "data-rankable": {
+      "control": false,
+      "treatment": true,
+      "proves": "HTML table-patterns"
+    },
+    "row-lever": {
+      "control": false,
+      "treatment": true,
+      "proves": "HTML table-patterns"
+    },
+    "slab-hollow": {
+      "control": false,
+      "treatment": true,
+      "proves": "HTML table-patterns"
+    },
+    "zap()": {
+      "control": false,
+      "treatment": false,
+      "proves": "JS event-handling"
+    },
+    "on_x_y": {
+      "control": true,
+      "treatment": true,
+      "proves": "JS event-handling"
+    },
+    "createVault()": {
+      "control": false,
+      "treatment": false,
+      "proves": "JS state-management"
+    },
+    "linkVault(": {
+      "control": false,
+      "treatment": false,
+      "proves": "JS state-management"
+    },
+    "vault.tap(": {
+      "control": false,
+      "treatment": false,
+      "proves": "JS state-management"
+    },
+    "skyFetch()": {
+      "control": false,
+      "treatment": false,
+      "proves": "JS fetch-patterns"
+    },
+    "/sky/": {
+      "control": false,
+      "treatment": false,
+      "proves": "JS fetch-patterns"
+    },
+    "_landed": {
+      "control": true,
+      "treatment": false,
+      "proves": "JS fetch-patterns"
+    },
+    "_crashed": {
+      "control": true,
+      "treatment": false,
+      "proves": "JS fetch-patterns"
+    }
+  },
+  "summary": {
+    "skillMatchRate": "8/9",
+    "refMatchRate": "2/9",
+    "toolMatchRate": "1/9",
+    "signalMatchRate": "16/26",
+    "conclusion": "differences_detected",
+    "details": "skills differed in 1/9 prompts; subskill refs differed in 7/9 prompts; 10/26 verification signals differed"
+  }
+}

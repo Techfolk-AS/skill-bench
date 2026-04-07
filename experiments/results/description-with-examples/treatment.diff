@@ -1,0 +1,33 @@
+diff --color -ru ProjectA/.claude/skills/css/SKILL.md ProjectB/.claude/skills/css/SKILL.md
+--- ProjectA/.claude/skills/css/SKILL.md	2026-03-31 15:17:10
++++ ProjectB/.claude/skills/css/SKILL.md	2026-03-31 15:22:26
+@@ -1,6 +1,6 @@
+ ---
+ name: css
+-description: CSS styling, layout, animation, and theming conventions
++description: CSS styling, layout, animation, and theming conventions. Examples: "add dark mode", "make the sidebar responsive", "add hover animations", "style a two-column layout"
+ summary: CSS, layout, spacing, animations, theming, colors
+ triggers: styling CSS | building layouts | working with spacing | grid or flexbox containers | adding animations | transitions | dark mode | theming | color schemes
+ ---
+diff --color -ru ProjectA/.claude/skills/html/SKILL.md ProjectB/.claude/skills/html/SKILL.md
+--- ProjectA/.claude/skills/html/SKILL.md	2026-03-31 15:17:10
++++ ProjectB/.claude/skills/html/SKILL.md	2026-03-31 15:24:39
+@@ -1,6 +1,6 @@
+ ---
+ name: html
+-description: HTML structure, forms, dialogs, and data table conventions
++description: HTML structure, forms, dialogs, and data table conventions. Examples: "add form validation", "create a confirmation popup", "build a sortable data table", "add a modal"
+ summary: HTML, forms, dialogs, tables, semantics
+ triggers: writing HTML markup | building forms | adding inputs | form validation | creating modals | dialog boxes | popups | data tables | sortable tables
+ ---
+diff --color -ru ProjectA/.claude/skills/javascript/SKILL.md ProjectB/.claude/skills/javascript/SKILL.md
+--- ProjectA/.claude/skills/javascript/SKILL.md	2026-03-31 15:17:10
++++ ProjectB/.claude/skills/javascript/SKILL.md	2026-03-31 15:27:03
+@@ -1,6 +1,6 @@
+ ---
+ name: javascript
+-description: JavaScript conventions for events, state management, and API fetching
++description: JavaScript conventions for events, state management, and API fetching. Examples: "add click handlers", "filter the table in real-time", "fetch data from an API", "store form state"
+ summary: JS, events, state management, API fetching, naming conventions
+ triggers: adding event listeners | handling clicks | DOM events | interactive behavior | managing state | reactive updates | fetching data | API calls | loading data
+ ---

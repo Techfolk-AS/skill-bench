@@ -1,0 +1,20 @@
+Only in profile-experiments/ProjectB/.claude/hooks: skill-forced-eval-hook.sh
+diff --color -ru --exclude=node_modules --exclude=*.jsonl --exclude=logs --exclude=prompt-* profile-experiments/ProjectA/.claude/settings.json profile-experiments/ProjectB/.claude/settings.json
+--- profile-experiments/ProjectA/.claude/settings.json	2026-03-02 15:20:16
++++ profile-experiments/ProjectB/.claude/settings.json	2026-03-02 19:06:14
+@@ -15,6 +15,15 @@
+             "async": true
+           }
+         ]
++      },
++      {
++        "matcher": "",
++        "hooks": [
++          {
++            "type": "command",
++            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/skill-forced-eval-hook.sh\""
++          }
++        ]
+       }
+     ],
+     "SessionStart": [

@@ -1,0 +1,74 @@
+{
+  "prompt_number": 4,
+  "prompt_text": "Create a confirmation dialog that appears when the user clicks delete on a contact",
+  "control": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 35 events in 92.8s"
+      },
+      {
+        "text": "Signal \"forge-trigger\" present (proves HTML form-patterns)",
+        "passed": true,
+        "evidence": "Signal \"forge-trigger\" found in output"
+      },
+      {
+        "text": "Signal \"data-hatch-id\" present (proves HTML dialog-patterns)",
+        "passed": true,
+        "evidence": "Signal \"data-hatch-id\" found in output"
+      },
+      {
+        "text": "Signal \"hatch-trigger\" present (proves HTML dialog-patterns)",
+        "passed": true,
+        "evidence": "Signal \"hatch-trigger\" found in output"
+      },
+      {
+        "text": "Signal \"hatch-body\" present (proves HTML dialog-patterns)",
+        "passed": true,
+        "evidence": "Signal \"hatch-body\" found in output"
+      }
+    ],
+    "summary": {
+      "passed": 5,
+      "failed": 0,
+      "total": 5,
+      "pass_rate": 1
+    }
+  },
+  "treatment": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": false,
+        "evidence": "No data (run failed or missing)"
+      },
+      {
+        "text": "Signal \"forge-trigger\" present (proves HTML form-patterns)",
+        "passed": false,
+        "evidence": "No data (run failed or missing)"
+      },
+      {
+        "text": "Signal \"data-hatch-id\" present (proves HTML dialog-patterns)",
+        "passed": false,
+        "evidence": "No data (run failed or missing)"
+      },
+      {
+        "text": "Signal \"hatch-trigger\" present (proves HTML dialog-patterns)",
+        "passed": false,
+        "evidence": "No data (run failed or missing)"
+      },
+      {
+        "text": "Signal \"hatch-body\" present (proves HTML dialog-patterns)",
+        "passed": false,
+        "evidence": "No data (run failed or missing)"
+      }
+    ],
+    "summary": {
+      "passed": 0,
+      "failed": 5,
+      "total": 5,
+      "pass_rate": 0
+    }
+  }
+}

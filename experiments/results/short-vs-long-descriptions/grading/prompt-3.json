@@ -1,0 +1,64 @@
+{
+  "prompt_number": 3,
+  "prompt_text": "Add event listeners to handle clicking the delete button",
+  "control": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 23 events in 26.3s"
+      },
+      {
+        "text": "Signal \"data-rack\" correctly absent (no leakage)",
+        "passed": true,
+        "evidence": "Signal \"data-rack\" correctly absent"
+      },
+      {
+        "text": "Signal \"--seam\" correctly absent (no leakage)",
+        "passed": true,
+        "evidence": "Signal \"--seam\" correctly absent"
+      },
+      {
+        "text": "Signal \"data-zap\" correctly absent (no leakage)",
+        "passed": true,
+        "evidence": "Signal \"data-zap\" correctly absent"
+      }
+    ],
+    "summary": {
+      "passed": 4,
+      "failed": 0,
+      "total": 4,
+      "pass_rate": 1
+    }
+  },
+  "treatment": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 17 events in 22.3s"
+      },
+      {
+        "text": "Signal \"data-rack\" correctly absent (no leakage)",
+        "passed": true,
+        "evidence": "Signal \"data-rack\" correctly absent"
+      },
+      {
+        "text": "Signal \"--seam\" correctly absent (no leakage)",
+        "passed": true,
+        "evidence": "Signal \"--seam\" correctly absent"
+      },
+      {
+        "text": "Signal \"data-zap\" correctly absent (no leakage)",
+        "passed": true,
+        "evidence": "Signal \"data-zap\" correctly absent"
+      }
+    ],
+    "summary": {
+      "passed": 4,
+      "failed": 0,
+      "total": 4,
+      "pass_rate": 1
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "experiment": "descriptive-reference-names",
+  "date": "2026-03-30",
+  "prompts_graded": 9,
+  "control": {
+    "passed": 27,
+    "total": 36,
+    "pass_rate": 0.75
+  },
+  "treatment": {
+    "passed": 30,
+    "total": 36,
+    "pass_rate": 0.8333333333333334
+  },
+  "delta_pass_rate": 0.08333333333333337
+}

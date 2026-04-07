@@ -1,0 +1,16 @@
+{
+  "experiment": "keyword-dense-descriptions",
+  "date": "2026-03-30",
+  "prompts_graded": 10,
+  "control": {
+    "passed": 33,
+    "total": 41,
+    "pass_rate": 0.8048780487804879
+  },
+  "treatment": {
+    "passed": 32,
+    "total": 41,
+    "pass_rate": 0.7804878048780488
+  },
+  "delta_pass_rate": -0.024390243902439046
+}

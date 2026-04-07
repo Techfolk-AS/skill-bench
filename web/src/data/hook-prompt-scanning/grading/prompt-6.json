@@ -1,0 +1,64 @@
+{
+  "prompt_number": 6,
+  "prompt_text": "Add a fade-in animation when new contacts appear in the table",
+  "control": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 13 events in 27.3s"
+      },
+      {
+        "text": "Signal \"data-rack\" correctly absent (no leakage)",
+        "passed": true,
+        "evidence": "Signal \"data-rack\" correctly absent"
+      },
+      {
+        "text": "Signal \"--seam\" correctly absent (no leakage)",
+        "passed": true,
+        "evidence": "Signal \"--seam\" correctly absent"
+      },
+      {
+        "text": "Signal \"data-zap\" correctly absent (no leakage)",
+        "passed": true,
+        "evidence": "Signal \"data-zap\" correctly absent"
+      }
+    ],
+    "summary": {
+      "passed": 4,
+      "failed": 0,
+      "total": 4,
+      "pass_rate": 1
+    }
+  },
+  "treatment": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 13 events in 27.0s"
+      },
+      {
+        "text": "Signal \"data-rack\" correctly absent (no leakage)",
+        "passed": true,
+        "evidence": "Signal \"data-rack\" correctly absent"
+      },
+      {
+        "text": "Signal \"--seam\" correctly absent (no leakage)",
+        "passed": true,
+        "evidence": "Signal \"--seam\" correctly absent"
+      },
+      {
+        "text": "Signal \"data-zap\" correctly absent (no leakage)",
+        "passed": true,
+        "evidence": "Signal \"data-zap\" correctly absent"
+      }
+    ],
+    "summary": {
+      "passed": 4,
+      "failed": 0,
+      "total": 4,
+      "pass_rate": 1
+    }
+  }
+}

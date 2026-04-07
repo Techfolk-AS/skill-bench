@@ -1,0 +1,74 @@
+{
+  "prompt_number": 6,
+  "prompt_text": "When someone types in the search box, update the results live",
+  "control": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 17 events in 51.4s"
+      },
+      {
+        "text": "Signal \"zap()\" present (proves JS event-handling)",
+        "passed": true,
+        "evidence": "Signal \"zap()\" found in output"
+      },
+      {
+        "text": "Signal \"on_x_y\" present (proves JS event-handling)",
+        "passed": true,
+        "evidence": "Signal \"on_x_y\" found in output"
+      },
+      {
+        "text": "Signal \"createVault()\" present (proves JS state-management)",
+        "passed": true,
+        "evidence": "Signal \"createVault()\" found in output"
+      },
+      {
+        "text": "Signal \"linkVault(\" present (proves JS state-management)",
+        "passed": true,
+        "evidence": "Signal \"linkVault(\" found in output"
+      }
+    ],
+    "summary": {
+      "passed": 5,
+      "failed": 0,
+      "total": 5,
+      "pass_rate": 1
+    }
+  },
+  "treatment": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 17 events in 89.2s"
+      },
+      {
+        "text": "Signal \"zap()\" present (proves JS event-handling)",
+        "passed": true,
+        "evidence": "Signal \"zap()\" found in output"
+      },
+      {
+        "text": "Signal \"on_x_y\" present (proves JS event-handling)",
+        "passed": true,
+        "evidence": "Signal \"on_x_y\" found in output"
+      },
+      {
+        "text": "Signal \"createVault()\" present (proves JS state-management)",
+        "passed": true,
+        "evidence": "Signal \"createVault()\" found in output"
+      },
+      {
+        "text": "Signal \"linkVault(\" present (proves JS state-management)",
+        "passed": true,
+        "evidence": "Signal \"linkVault(\" found in output"
+      }
+    ],
+    "summary": {
+      "passed": 5,
+      "failed": 0,
+      "total": 5,
+      "pass_rate": 1
+    }
+  }
+}

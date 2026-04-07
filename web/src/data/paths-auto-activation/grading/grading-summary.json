@@ -1,0 +1,16 @@
+{
+  "experiment": "paths-auto-activation",
+  "date": "2026-03-30",
+  "prompts_graded": 9,
+  "control": {
+    "passed": 31,
+    "total": 35,
+    "pass_rate": 0.8857142857142857
+  },
+  "treatment": {
+    "passed": 28,
+    "total": 35,
+    "pass_rate": 0.8
+  },
+  "delta_pass_rate": -0.08571428571428563
+}

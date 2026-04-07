@@ -1,0 +1,16 @@
+{
+  "experiment": "pure-routing-skill-body",
+  "date": "2026-03-31",
+  "prompts_graded": 8,
+  "control": {
+    "passed": 27,
+    "total": 31,
+    "pass_rate": 0.8709677419354839
+  },
+  "treatment": {
+    "passed": 31,
+    "total": 31,
+    "pass_rate": 1
+  },
+  "delta_pass_rate": 0.12903225806451613
+}

@@ -1,0 +1,84 @@
+{
+  "prompt_number": 3,
+  "prompt_text": "Add form validation to the contact form so empty fields show error messages",
+  "control": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": false,
+        "evidence": "No data (run failed or missing)"
+      },
+      {
+        "text": "Signal \"data-forge-id\" present (proves HTML form-patterns)",
+        "passed": false,
+        "evidence": "No data (run failed or missing)"
+      },
+      {
+        "text": "Signal \"flux-pod\" present (proves HTML form-patterns)",
+        "passed": false,
+        "evidence": "No data (run failed or missing)"
+      },
+      {
+        "text": "Signal \"zap()\" present (proves JS event-handling)",
+        "passed": false,
+        "evidence": "No data (run failed or missing)"
+      },
+      {
+        "text": "Signal \"on_x_y\" present (proves JS event-handling)",
+        "passed": false,
+        "evidence": "No data (run failed or missing)"
+      },
+      {
+        "text": "Signal \"forge-trigger\" present (proves HTML form-patterns)",
+        "passed": false,
+        "evidence": "No data (run failed or missing)"
+      }
+    ],
+    "summary": {
+      "passed": 0,
+      "failed": 6,
+      "total": 6,
+      "pass_rate": 0
+    }
+  },
+  "treatment": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 31 events in 78.8s"
+      },
+      {
+        "text": "Signal \"data-forge-id\" present (proves HTML form-patterns)",
+        "passed": true,
+        "evidence": "Signal \"data-forge-id\" found in output"
+      },
+      {
+        "text": "Signal \"flux-pod\" present (proves HTML form-patterns)",
+        "passed": true,
+        "evidence": "Signal \"flux-pod\" found in output"
+      },
+      {
+        "text": "Signal \"zap()\" present (proves JS event-handling)",
+        "passed": true,
+        "evidence": "Signal \"zap()\" found in output"
+      },
+      {
+        "text": "Signal \"on_x_y\" present (proves JS event-handling)",
+        "passed": true,
+        "evidence": "Signal \"on_x_y\" found in output"
+      },
+      {
+        "text": "Signal \"forge-trigger\" present (proves HTML form-patterns)",
+        "passed": true,
+        "evidence": "Signal \"forge-trigger\" found in output"
+      }
+    ],
+    "summary": {
+      "passed": 6,
+      "failed": 0,
+      "total": 6,
+      "pass_rate": 1
+    }
+  }
+}

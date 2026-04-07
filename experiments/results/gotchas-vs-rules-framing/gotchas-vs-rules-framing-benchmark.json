@@ -1,0 +1,708 @@
+{
+  "metadata": {
+    "experiment_name": "gotchas-vs-rules-framing",
+    "control_description": "No changes (baseline)",
+    "treatment_description": "ProjectB change: Add a \"Common failures\" section to each SKILL.md body that reframes the key conventions as failure modes. Control keeps the current neutral \"This project uses custom X conventions\" framing.",
+    "timestamp": "2026-03-31T10:45:53.478Z",
+    "prompts_evaluated": 9
+  },
+  "runs": [
+    {
+      "eval_id": 10,
+      "eval_name": "Prompt 10",
+      "configuration": "control",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1,
+        "passed": 4,
+        "total": 4,
+        "time_seconds": 16.344,
+        "events": 9,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Prompt completed successfully",
+          "passed": true,
+          "evidence": "Completed with 9 events in 16.3s"
+        },
+        {
+          "text": "Signal \"data-rack\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"data-rack\" correctly absent"
+        },
+        {
+          "text": "Signal \"--seam\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"--seam\" correctly absent"
+        },
+        {
+          "text": "Signal \"data-zap\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"data-zap\" correctly absent"
+        }
+      ]
+    },
+    {
+      "eval_id": 10,
+      "eval_name": "Prompt 10",
+      "configuration": "treatment",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1,
+        "passed": 4,
+        "total": 4,
+        "time_seconds": 16.791,
+        "events": 9,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Prompt completed successfully",
+          "passed": true,
+          "evidence": "Completed with 9 events in 16.8s"
+        },
+        {
+          "text": "Signal \"data-rack\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"data-rack\" correctly absent"
+        },
+        {
+          "text": "Signal \"--seam\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"--seam\" correctly absent"
+        },
+        {
+          "text": "Signal \"data-zap\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"data-zap\" correctly absent"
+        }
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "Prompt 2",
+      "configuration": "control",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1,
+        "passed": 3,
+        "total": 3,
+        "time_seconds": 53.588,
+        "events": 21,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Prompt completed successfully",
+          "passed": true,
+          "evidence": "Completed with 21 events in 53.6s"
+        },
+        {
+          "text": "Signal \"data-coat\" present (proves CSS theming)",
+          "passed": true,
+          "evidence": "Signal \"data-coat\" found in output"
+        },
+        {
+          "text": "Signal \"--ink-\" present (proves CSS theming)",
+          "passed": true,
+          "evidence": "Signal \"--ink-\" found in output"
+        }
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "Prompt 2",
+      "configuration": "treatment",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0,
+        "passed": 0,
+        "total": 3,
+        "time_seconds": 0,
+        "events": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Prompt completed successfully",
+          "passed": false,
+          "evidence": "No data (run failed or missing)"
+        },
+        {
+          "text": "Signal \"data-coat\" present (proves CSS theming)",
+          "passed": false,
+          "evidence": "No data (run failed or missing)"
+        },
+        {
+          "text": "Signal \"--ink-\" present (proves CSS theming)",
+          "passed": false,
+          "evidence": "No data (run failed or missing)"
+        }
+      ]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "Prompt 3",
+      "configuration": "control",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1,
+        "passed": 6,
+        "total": 6,
+        "time_seconds": 79.174,
+        "events": 29,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Prompt completed successfully",
+          "passed": true,
+          "evidence": "Completed with 29 events in 79.2s"
+        },
+        {
+          "text": "Signal \"flux-pod\" present (proves HTML form-patterns)",
+          "passed": true,
+          "evidence": "Signal \"flux-pod\" found in output"
+        },
+        {
+          "text": "Signal \"zap()\" present (proves JS event-handling)",
+          "passed": true,
+          "evidence": "Signal \"zap()\" found in output"
+        },
+        {
+          "text": "Signal \"on_x_y\" present (proves JS event-handling)",
+          "passed": true,
+          "evidence": "Signal \"on_x_y\" found in output"
+        },
+        {
+          "text": "Signal \"data-forge-id\" present (proves HTML form-patterns)",
+          "passed": true,
+          "evidence": "Signal \"data-forge-id\" found in output"
+        },
+        {
+          "text": "Signal \"forge-trigger\" present (proves HTML form-patterns)",
+          "passed": true,
+          "evidence": "Signal \"forge-trigger\" found in output"
+        }
+      ]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "Prompt 3",
+      "configuration": "treatment",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0,
+        "passed": 0,
+        "total": 6,
+        "time_seconds": 0,
+        "events": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Prompt completed successfully",
+          "passed": false,
+          "evidence": "No data (run failed or missing)"
+        },
+        {
+          "text": "Signal \"flux-pod\" present (proves HTML form-patterns)",
+          "passed": false,
+          "evidence": "No data (run failed or missing)"
+        },
+        {
+          "text": "Signal \"zap()\" present (proves JS event-handling)",
+          "passed": false,
+          "evidence": "No data (run failed or missing)"
+        },
+        {
+          "text": "Signal \"on_x_y\" present (proves JS event-handling)",
+          "passed": false,
+          "evidence": "No data (run failed or missing)"
+        },
+        {
+          "text": "Signal \"data-forge-id\" present (proves HTML form-patterns)",
+          "passed": false,
+          "evidence": "No data (run failed or missing)"
+        },
+        {
+          "text": "Signal \"forge-trigger\" present (proves HTML form-patterns)",
+          "passed": false,
+          "evidence": "No data (run failed or missing)"
+        }
+      ]
+    },
+    {
+      "eval_id": 4,
+      "eval_name": "Prompt 4",
+      "configuration": "control",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1,
+        "passed": 4,
+        "total": 4,
+        "time_seconds": 17.826,
+        "events": 19,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Prompt completed successfully",
+          "passed": true,
+          "evidence": "Completed with 19 events in 17.8s"
+        },
+        {
+          "text": "Signal \"data-rack\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"data-rack\" correctly absent"
+        },
+        {
+          "text": "Signal \"--seam\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"--seam\" correctly absent"
+        },
+        {
+          "text": "Signal \"data-zap\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"data-zap\" correctly absent"
+        }
+      ]
+    },
+    {
+      "eval_id": 4,
+      "eval_name": "Prompt 4",
+      "configuration": "treatment",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1,
+        "passed": 4,
+        "total": 4,
+        "time_seconds": 34.134,
+        "events": 29,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Prompt completed successfully",
+          "passed": true,
+          "evidence": "Completed with 29 events in 34.1s"
+        },
+        {
+          "text": "Signal \"data-rack\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"data-rack\" correctly absent"
+        },
+        {
+          "text": "Signal \"--seam\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"--seam\" correctly absent"
+        },
+        {
+          "text": "Signal \"data-zap\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"data-zap\" correctly absent"
+        }
+      ]
+    },
+    {
+      "eval_id": 5,
+      "eval_name": "Prompt 5",
+      "configuration": "control",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1,
+        "passed": 4,
+        "total": 4,
+        "time_seconds": 46.482,
+        "events": 33,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Prompt completed successfully",
+          "passed": true,
+          "evidence": "Completed with 33 events in 46.5s"
+        },
+        {
+          "text": "Signal \"data-rack\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"data-rack\" correctly absent"
+        },
+        {
+          "text": "Signal \"--seam\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"--seam\" correctly absent"
+        },
+        {
+          "text": "Signal \"data-zap\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"data-zap\" correctly absent"
+        }
+      ]
+    },
+    {
+      "eval_id": 5,
+      "eval_name": "Prompt 5",
+      "configuration": "treatment",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0,
+        "passed": 0,
+        "total": 4,
+        "time_seconds": 0,
+        "events": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Prompt completed successfully",
+          "passed": false,
+          "evidence": "No data (run failed or missing)"
+        },
+        {
+          "text": "Signal \"data-rack\" correctly absent (no leakage)",
+          "passed": false,
+          "evidence": "No data (run failed or missing)"
+        },
+        {
+          "text": "Signal \"--seam\" correctly absent (no leakage)",
+          "passed": false,
+          "evidence": "No data (run failed or missing)"
+        },
+        {
+          "text": "Signal \"data-zap\" correctly absent (no leakage)",
+          "passed": false,
+          "evidence": "No data (run failed or missing)"
+        }
+      ]
+    },
+    {
+      "eval_id": 6,
+      "eval_name": "Prompt 6",
+      "configuration": "control",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1,
+        "passed": 4,
+        "total": 4,
+        "time_seconds": 34.965,
+        "events": 13,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Prompt completed successfully",
+          "passed": true,
+          "evidence": "Completed with 13 events in 35.0s"
+        },
+        {
+          "text": "Signal \"data-rack\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"data-rack\" correctly absent"
+        },
+        {
+          "text": "Signal \"--seam\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"--seam\" correctly absent"
+        },
+        {
+          "text": "Signal \"data-zap\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"data-zap\" correctly absent"
+        }
+      ]
+    },
+    {
+      "eval_id": 6,
+      "eval_name": "Prompt 6",
+      "configuration": "treatment",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1,
+        "passed": 4,
+        "total": 4,
+        "time_seconds": 36.68,
+        "events": 15,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Prompt completed successfully",
+          "passed": true,
+          "evidence": "Completed with 15 events in 36.7s"
+        },
+        {
+          "text": "Signal \"data-rack\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"data-rack\" correctly absent"
+        },
+        {
+          "text": "Signal \"--seam\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"--seam\" correctly absent"
+        },
+        {
+          "text": "Signal \"data-zap\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"data-zap\" correctly absent"
+        }
+      ]
+    },
+    {
+      "eval_id": 7,
+      "eval_name": "Prompt 7",
+      "configuration": "control",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1,
+        "passed": 4,
+        "total": 4,
+        "time_seconds": 50.822,
+        "events": 19,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Prompt completed successfully",
+          "passed": true,
+          "evidence": "Completed with 19 events in 50.8s"
+        },
+        {
+          "text": "Signal \"data-rack\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"data-rack\" correctly absent"
+        },
+        {
+          "text": "Signal \"--seam\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"--seam\" correctly absent"
+        },
+        {
+          "text": "Signal \"data-zap\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"data-zap\" correctly absent"
+        }
+      ]
+    },
+    {
+      "eval_id": 7,
+      "eval_name": "Prompt 7",
+      "configuration": "treatment",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0,
+        "passed": 0,
+        "total": 4,
+        "time_seconds": 0,
+        "events": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Prompt completed successfully",
+          "passed": false,
+          "evidence": "No data (run failed or missing)"
+        },
+        {
+          "text": "Signal \"data-rack\" correctly absent (no leakage)",
+          "passed": false,
+          "evidence": "No data (run failed or missing)"
+        },
+        {
+          "text": "Signal \"--seam\" correctly absent (no leakage)",
+          "passed": false,
+          "evidence": "No data (run failed or missing)"
+        },
+        {
+          "text": "Signal \"data-zap\" correctly absent (no leakage)",
+          "passed": false,
+          "evidence": "No data (run failed or missing)"
+        }
+      ]
+    },
+    {
+      "eval_id": 8,
+      "eval_name": "Prompt 8",
+      "configuration": "control",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1,
+        "passed": 4,
+        "total": 4,
+        "time_seconds": 21.98,
+        "events": 13,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Prompt completed successfully",
+          "passed": true,
+          "evidence": "Completed with 13 events in 22.0s"
+        },
+        {
+          "text": "Signal \"data-rack\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"data-rack\" correctly absent"
+        },
+        {
+          "text": "Signal \"--seam\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"--seam\" correctly absent"
+        },
+        {
+          "text": "Signal \"data-zap\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"data-zap\" correctly absent"
+        }
+      ]
+    },
+    {
+      "eval_id": 8,
+      "eval_name": "Prompt 8",
+      "configuration": "treatment",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1,
+        "passed": 4,
+        "total": 4,
+        "time_seconds": 28.574,
+        "events": 19,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Prompt completed successfully",
+          "passed": true,
+          "evidence": "Completed with 19 events in 28.6s"
+        },
+        {
+          "text": "Signal \"data-rack\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"data-rack\" correctly absent"
+        },
+        {
+          "text": "Signal \"--seam\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"--seam\" correctly absent"
+        },
+        {
+          "text": "Signal \"data-zap\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"data-zap\" correctly absent"
+        }
+      ]
+    },
+    {
+      "eval_id": 9,
+      "eval_name": "Prompt 9",
+      "configuration": "control",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1,
+        "passed": 4,
+        "total": 4,
+        "time_seconds": 16.263,
+        "events": 15,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Prompt completed successfully",
+          "passed": true,
+          "evidence": "Completed with 15 events in 16.3s"
+        },
+        {
+          "text": "Signal \"data-rack\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"data-rack\" correctly absent"
+        },
+        {
+          "text": "Signal \"--seam\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"--seam\" correctly absent"
+        },
+        {
+          "text": "Signal \"data-zap\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"data-zap\" correctly absent"
+        }
+      ]
+    },
+    {
+      "eval_id": 9,
+      "eval_name": "Prompt 9",
+      "configuration": "treatment",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1,
+        "passed": 4,
+        "total": 4,
+        "time_seconds": 16.417,
+        "events": 15,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Prompt completed successfully",
+          "passed": true,
+          "evidence": "Completed with 15 events in 16.4s"
+        },
+        {
+          "text": "Signal \"data-rack\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"data-rack\" correctly absent"
+        },
+        {
+          "text": "Signal \"--seam\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"--seam\" correctly absent"
+        },
+        {
+          "text": "Signal \"data-zap\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"data-zap\" correctly absent"
+        }
+      ]
+    }
+  ],
+  "run_summary": {
+    "control": {
+      "pass_rate": {
+        "mean": 1,
+        "stddev": 0,
+        "min": 1,
+        "max": 1
+      },
+      "time_seconds": {
+        "mean": 37.494,
+        "stddev": 20.512,
+        "min": 16.263,
+        "max": 79.174
+      }
+    },
+    "treatment": {
+      "pass_rate": {
+        "mean": 0.556,
+        "stddev": 0.497,
+        "min": 0,
+        "max": 1
+      },
+      "time_seconds": {
+        "mean": 14.733,
+        "stddev": 14.625,
+        "min": 0,
+        "max": 36.68
+      }
+    },
+    "delta": {
+      "pass_rate": "-44.4%",
+      "time_seconds": "-22.8s"
+    }
+  },
+  "notes": [
+    "Treatment degrades pass rate by 44% - negative impact",
+    "5 prompt(s) pass 100% on both sides - assertions may not discriminate",
+    "Treatment saves 22.8s average execution time"
+  ]
+}

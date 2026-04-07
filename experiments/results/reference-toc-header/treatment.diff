@@ -1,0 +1,228 @@
+diff --color -ru ProjectA/.claude/skills/css/references/animation-patterns.md ProjectB/.claude/skills/css/references/animation-patterns.md
+--- ProjectA/.claude/skills/css/references/animation-patterns.md	2026-03-31 13:58:48
++++ ProjectB/.claude/skills/css/references/animation-patterns.md	2026-03-31 14:13:21
+@@ -1,5 +1,17 @@
+ # Animation Patterns
+ 
++**Contents:**
++- Core Convention: `data-zap` Attribute System
++- Timing: `--pulse` Custom Property
++- Reduced Motion: `motion-safe()` Wrapper
++- Rules
++- Anti-patterns
++- Composition Rules
++- Modification Guide
++
++---
++
++
+ ## Core Convention: `data-zap` Attribute System
+ 
+ All animated elements MUST use the `data-zap` attribute. Never use CSS classes to define animations.
+diff --color -ru ProjectA/.claude/skills/css/references/best-practices.md ProjectB/.claude/skills/css/references/best-practices.md
+--- ProjectA/.claude/skills/css/references/best-practices.md	2026-03-31 13:58:48
++++ ProjectB/.claude/skills/css/references/best-practices.md	2026-03-31 14:13:21
+@@ -1,5 +1,13 @@
+ # CSS Best Practices
+ 
++**Contents:**
++- Naming
++- Structure
++- Responsive
++
++---
++
++
+ ## Naming
+ 
+ - Use meaningful class names that describe purpose, not appearance
+diff --color -ru ProjectA/.claude/skills/css/references/layout-patterns.md ProjectB/.claude/skills/css/references/layout-patterns.md
+--- ProjectA/.claude/skills/css/references/layout-patterns.md	2026-03-31 13:58:48
++++ ProjectB/.claude/skills/css/references/layout-patterns.md	2026-03-31 14:13:21
+@@ -1,5 +1,16 @@
+ # Layout Patterns
+ 
++**Contents:**
++- Core Convention: `data-rack` Attribute System
++- Spacing: `--seam` Variable
++- Rules
++- Anti-patterns
++- Composition Rules
++- Modification Guide
++
++---
++
++
+ ## Core Convention: `data-rack` Attribute System
+ 
+ All layout containers MUST use the `data-rack` attribute instead of layout-specific classes.
+diff --color -ru ProjectA/.claude/skills/css/references/theming.md ProjectB/.claude/skills/css/references/theming.md
+--- ProjectA/.claude/skills/css/references/theming.md	2026-03-31 13:58:48
++++ ProjectB/.claude/skills/css/references/theming.md	2026-03-31 14:13:21
+@@ -1,5 +1,18 @@
+ # Theming
+ 
++**Contents:**
++- Core Convention: `data-coat` Attribute
++- Brand Colors: `--ink-*` Custom Properties
++- Surface Utilities: `.plate-*`
++- Auto Theme
++- Rules
++- Anti-patterns
++- Composition Rules
++- Modification Guide
++
++---
++
++
+ ## Core Convention: `data-coat` Attribute
+ 
+ Theme is set via the `data-coat` attribute on `<html>`. Valid values: `light`, `dark`, `auto`.
+diff --color -ru ProjectA/.claude/skills/html/references/best-practices.md ProjectB/.claude/skills/html/references/best-practices.md
+--- ProjectA/.claude/skills/html/references/best-practices.md	2026-03-31 13:58:48
++++ ProjectB/.claude/skills/html/references/best-practices.md	2026-03-31 14:13:21
+@@ -1,5 +1,13 @@
+ # HTML Best Practices
+ 
++**Contents:**
++- Semantics
++- Accessibility
++- Structure
++
++---
++
++
+ ## Semantics
+ 
+ - Use semantic elements (`<article>`, `<section>`, `<nav>`) over generic `<div>`
+diff --color -ru ProjectA/.claude/skills/html/references/dialog-patterns.md ProjectB/.claude/skills/html/references/dialog-patterns.md
+--- ProjectA/.claude/skills/html/references/dialog-patterns.md	2026-03-31 13:58:48
++++ ProjectB/.claude/skills/html/references/dialog-patterns.md	2026-03-31 14:13:21
+@@ -1,5 +1,15 @@
+ # Dialog Patterns
+ 
++**Contents:**
++- Core Convention: `data-hatch-id` Attribute
++- Rules
++- Anti-patterns
++- Composition Rules
++- Modification Guide
++
++---
++
++
+ ## Core Convention: `data-hatch-id` Attribute
+ 
+ All dialogs MUST use the `<dialog>` element with a `data-hatch-id` attribute.
+diff --color -ru ProjectA/.claude/skills/html/references/form-patterns.md ProjectB/.claude/skills/html/references/form-patterns.md
+--- ProjectA/.claude/skills/html/references/form-patterns.md	2026-03-31 13:58:48
++++ ProjectB/.claude/skills/html/references/form-patterns.md	2026-03-31 14:13:21
+@@ -1,5 +1,15 @@
+ # Form Patterns
+ 
++**Contents:**
++- Core Convention: `flux-pod` and `data-forge-id`
++- Rules
++- Anti-patterns
++- Composition Rules
++- Modification Guide
++
++---
++
++
+ ## Core Convention: `flux-pod` and `data-forge-id`
+ 
+ All forms in this project follow a strict structure.
+diff --color -ru ProjectA/.claude/skills/html/references/table-patterns.md ProjectB/.claude/skills/html/references/table-patterns.md
+--- ProjectA/.claude/skills/html/references/table-patterns.md	2026-03-31 13:58:48
++++ ProjectB/.claude/skills/html/references/table-patterns.md	2026-03-31 14:13:21
+@@ -1,5 +1,15 @@
+ # Table Patterns
+ 
++**Contents:**
++- Core Convention: `data-slab-id` Attribute
++- Rules
++- Anti-patterns
++- Composition Rules
++- Modification Guide
++
++---
++
++
+ ## Core Convention: `data-slab-id` Attribute
+ 
+ All data tables MUST use the `<table>` element with a `data-slab-id` attribute.
+diff --color -ru ProjectA/.claude/skills/javascript/references/best-practices.md ProjectB/.claude/skills/javascript/references/best-practices.md
+--- ProjectA/.claude/skills/javascript/references/best-practices.md	2026-03-31 13:58:48
++++ ProjectB/.claude/skills/javascript/references/best-practices.md	2026-03-31 14:13:21
+@@ -1,5 +1,13 @@
+ # JavaScript Best Practices
+ 
++**Contents:**
++- Modules
++- Error Handling
++- Naming
++
++---
++
++
+ ## Modules
+ 
+ - Use ES modules (import/export) over CommonJS
+diff --color -ru ProjectA/.claude/skills/javascript/references/event-handling.md ProjectB/.claude/skills/javascript/references/event-handling.md
+--- ProjectA/.claude/skills/javascript/references/event-handling.md	2026-03-31 13:58:48
++++ ProjectB/.claude/skills/javascript/references/event-handling.md	2026-03-31 14:13:21
+@@ -1,5 +1,15 @@
+ # Event Handling
+ 
++**Contents:**
++- Core Convention: `zap()` Function
++- Rules
++- Anti-patterns
++- Composition Rules
++- Modification Guide
++
++---
++
++
+ ## Core Convention: `zap()` Function
+ 
+ This project uses "`zap()`" instead of `addEventListener` for all event binding. Never use `addEventListener` directly.
+diff --color -ru ProjectA/.claude/skills/javascript/references/fetch-patterns.md ProjectB/.claude/skills/javascript/references/fetch-patterns.md
+--- ProjectA/.claude/skills/javascript/references/fetch-patterns.md	2026-03-31 13:58:48
++++ ProjectB/.claude/skills/javascript/references/fetch-patterns.md	2026-03-31 14:13:21
+@@ -1,5 +1,15 @@
+ # Fetch Patterns
+ 
++**Contents:**
++- Core Convention: `skyFetch()` Function
++- Rules
++- Anti-patterns
++- Composition Rules
++- Modification Guide
++
++---
++
++
+ ## Core Convention: `skyFetch()` Function
+ 
+ All API calls use `skyFetch()` from `./sky.js`. Never use raw `fetch()`.
+diff --color -ru ProjectA/.claude/skills/javascript/references/state-management.md ProjectB/.claude/skills/javascript/references/state-management.md
+--- ProjectA/.claude/skills/javascript/references/state-management.md	2026-03-31 13:58:48
++++ ProjectB/.claude/skills/javascript/references/state-management.md	2026-03-31 14:13:21
+@@ -1,5 +1,15 @@
+ # State Management
+ 
++**Contents:**
++- Core Convention: `createVault()` Function
++- Rules
++- Anti-patterns
++- Composition Rules
++- Modification Guide
++
++---
++
++
+ ## Core Convention: `createVault()` Function
+ 
+ All reactive state uses `createVault()` from `./vault.js`. Never use global variables for shared state.

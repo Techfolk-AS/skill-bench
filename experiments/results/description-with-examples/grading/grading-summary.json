@@ -1,0 +1,16 @@
+{
+  "experiment": "description-with-examples",
+  "date": "2026-03-31",
+  "prompts_graded": 10,
+  "control": {
+    "passed": 40,
+    "total": 41,
+    "pass_rate": 0.975609756097561
+  },
+  "treatment": {
+    "passed": 33,
+    "total": 41,
+    "pass_rate": 0.8048780487804879
+  },
+  "delta_pass_rate": -0.1707317073170731
+}

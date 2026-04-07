@@ -1,0 +1,885 @@
+{
+  "metadata": {
+    "experiment_name": "forced-eval-hook-v4",
+    "control_description": "No changes (baseline)",
+    "treatment_description": "ProjectB change: Add `skill-forced-eval-hook.sh` that outputs forced evaluation instructions on every prompt, requiring Claude to reason about each skill YES/NO and activate via Skill tool before proceeding.",
+    "timestamp": "2026-03-18T21:48:39.104Z",
+    "prompts_evaluated": 8
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "eval_name": "Prompt 1",
+      "configuration": "control",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1,
+        "passed": 6,
+        "total": 6,
+        "time_seconds": 68.505,
+        "events": 21,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Prompt completed successfully",
+          "passed": true,
+          "evidence": "Completed with 21 events in 68.5s"
+        },
+        {
+          "text": "Signal \"data-rack\" present (proves CSS layout-patterns)",
+          "passed": true,
+          "evidence": "Signal \"data-rack\" found in output"
+        },
+        {
+          "text": "Signal \"--seam\" present (proves CSS layout-patterns)",
+          "passed": true,
+          "evidence": "Signal \"--seam\" found in output"
+        },
+        {
+          "text": "Signal \"data-coat\" present (proves CSS theming)",
+          "passed": true,
+          "evidence": "Signal \"data-coat\" found in output"
+        },
+        {
+          "text": "Signal \"--ink-\" present (proves CSS theming)",
+          "passed": true,
+          "evidence": "Signal \"--ink-\" found in output"
+        },
+        {
+          "text": "Signal \".plate-\" present (proves CSS theming)",
+          "passed": true,
+          "evidence": "Signal \".plate-\" found in output"
+        }
+      ]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "Prompt 1",
+      "configuration": "treatment",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.5,
+        "passed": 3,
+        "total": 6,
+        "time_seconds": 49.47,
+        "events": 19,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Prompt completed successfully",
+          "passed": true,
+          "evidence": "Completed with 19 events in 49.5s"
+        },
+        {
+          "text": "Signal \"data-rack\" present (proves CSS layout-patterns)",
+          "passed": true,
+          "evidence": "Signal \"data-rack\" found in output"
+        },
+        {
+          "text": "Signal \"--seam\" present (proves CSS layout-patterns)",
+          "passed": true,
+          "evidence": "Signal \"--seam\" found in output"
+        },
+        {
+          "text": "Signal \"data-coat\" present (proves CSS theming)",
+          "passed": false,
+          "evidence": "Signal \"data-coat\" not found. Present signals: data-rack, --seam"
+        },
+        {
+          "text": "Signal \"--ink-\" present (proves CSS theming)",
+          "passed": false,
+          "evidence": "Signal \"--ink-\" not found. Present signals: data-rack, --seam"
+        },
+        {
+          "text": "Signal \".plate-\" present (proves CSS theming)",
+          "passed": false,
+          "evidence": "Signal \".plate-\" not found. Present signals: data-rack, --seam"
+        }
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "Prompt 2",
+      "configuration": "control",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.5,
+        "passed": 4,
+        "total": 8,
+        "time_seconds": 19.17,
+        "events": 13,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Prompt completed successfully",
+          "passed": true,
+          "evidence": "Completed with 13 events in 19.2s"
+        },
+        {
+          "text": "Signal \"data-forge-id\" present (proves HTML form-patterns)",
+          "passed": true,
+          "evidence": "Signal \"data-forge-id\" found in output"
+        },
+        {
+          "text": "Signal \"flux-pod\" present (proves HTML form-patterns)",
+          "passed": true,
+          "evidence": "Signal \"flux-pod\" found in output"
+        },
+        {
+          "text": "Signal \"forge-trigger\" present (proves HTML form-patterns)",
+          "passed": true,
+          "evidence": "Signal \"forge-trigger\" found in output"
+        },
+        {
+          "text": "Signal \"zap()\" present (proves JS event-handling)",
+          "passed": false,
+          "evidence": "Signal \"zap()\" not found. Present signals: data-forge-id, flux-pod, forge-trigger"
+        },
+        {
+          "text": "Signal \"on_x_y\" present (proves JS event-handling)",
+          "passed": false,
+          "evidence": "Signal \"on_x_y\" not found. Present signals: data-forge-id, flux-pod, forge-trigger"
+        },
+        {
+          "text": "Signal \"data-rack\" present (proves CSS layout-patterns)",
+          "passed": false,
+          "evidence": "Signal \"data-rack\" not found. Present signals: data-forge-id, flux-pod, forge-trigger"
+        },
+        {
+          "text": "Signal \"--seam\" present (proves CSS layout-patterns)",
+          "passed": false,
+          "evidence": "Signal \"--seam\" not found. Present signals: data-forge-id, flux-pod, forge-trigger"
+        }
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "Prompt 2",
+      "configuration": "treatment",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1,
+        "passed": 8,
+        "total": 8,
+        "time_seconds": 86.094,
+        "events": 35,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Prompt completed successfully",
+          "passed": true,
+          "evidence": "Completed with 35 events in 86.1s"
+        },
+        {
+          "text": "Signal \"data-forge-id\" present (proves HTML form-patterns)",
+          "passed": true,
+          "evidence": "Signal \"data-forge-id\" found in output"
+        },
+        {
+          "text": "Signal \"flux-pod\" present (proves HTML form-patterns)",
+          "passed": true,
+          "evidence": "Signal \"flux-pod\" found in output"
+        },
+        {
+          "text": "Signal \"forge-trigger\" present (proves HTML form-patterns)",
+          "passed": true,
+          "evidence": "Signal \"forge-trigger\" found in output"
+        },
+        {
+          "text": "Signal \"zap()\" present (proves JS event-handling)",
+          "passed": true,
+          "evidence": "Signal \"zap()\" found in output"
+        },
+        {
+          "text": "Signal \"on_x_y\" present (proves JS event-handling)",
+          "passed": true,
+          "evidence": "Signal \"on_x_y\" found in output"
+        },
+        {
+          "text": "Signal \"data-rack\" present (proves CSS layout-patterns)",
+          "passed": true,
+          "evidence": "Signal \"data-rack\" found in output"
+        },
+        {
+          "text": "Signal \"--seam\" present (proves CSS layout-patterns)",
+          "passed": true,
+          "evidence": "Signal \"--seam\" found in output"
+        }
+      ]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "Prompt 3",
+      "configuration": "control",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1,
+        "passed": 4,
+        "total": 4,
+        "time_seconds": 29.325,
+        "events": 21,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Prompt completed successfully",
+          "passed": true,
+          "evidence": "Completed with 21 events in 29.3s"
+        },
+        {
+          "text": "Signal \"data-rack\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"data-rack\" correctly absent"
+        },
+        {
+          "text": "Signal \"--seam\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"--seam\" correctly absent"
+        },
+        {
+          "text": "Signal \"data-zap\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"data-zap\" correctly absent"
+        }
+      ]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "Prompt 3",
+      "configuration": "treatment",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1,
+        "passed": 4,
+        "total": 4,
+        "time_seconds": 52.283,
+        "events": 31,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Prompt completed successfully",
+          "passed": true,
+          "evidence": "Completed with 31 events in 52.3s"
+        },
+        {
+          "text": "Signal \"data-rack\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"data-rack\" correctly absent"
+        },
+        {
+          "text": "Signal \"--seam\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"--seam\" correctly absent"
+        },
+        {
+          "text": "Signal \"data-zap\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"data-zap\" correctly absent"
+        }
+      ]
+    },
+    {
+      "eval_id": 4,
+      "eval_name": "Prompt 4",
+      "configuration": "control",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.6363636363636364,
+        "passed": 7,
+        "total": 11,
+        "time_seconds": 81.023,
+        "events": 33,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Prompt completed successfully",
+          "passed": true,
+          "evidence": "Completed with 33 events in 81.0s"
+        },
+        {
+          "text": "Signal \"data-slab-id\" present (proves HTML table-patterns)",
+          "passed": true,
+          "evidence": "Signal \"data-slab-id\" found in output"
+        },
+        {
+          "text": "Signal \"data-rankable\" present (proves HTML table-patterns)",
+          "passed": true,
+          "evidence": "Signal \"data-rankable\" found in output"
+        },
+        {
+          "text": "Signal \"row-lever\" present (proves HTML table-patterns)",
+          "passed": true,
+          "evidence": "Signal \"row-lever\" found in output"
+        },
+        {
+          "text": "Signal \"slab-hollow\" present (proves HTML table-patterns)",
+          "passed": true,
+          "evidence": "Signal \"slab-hollow\" found in output"
+        },
+        {
+          "text": "Signal \"zap()\" present (proves JS event-handling)",
+          "passed": true,
+          "evidence": "Signal \"zap()\" found in output"
+        },
+        {
+          "text": "Signal \"on_x_y\" present (proves JS event-handling)",
+          "passed": true,
+          "evidence": "Signal \"on_x_y\" found in output"
+        },
+        {
+          "text": "Signal \"createVault()\" present (proves JS state-management)",
+          "passed": false,
+          "evidence": "Signal \"createVault()\" not found. Present signals: data-slab-id, data-rankable, row-lever, slab-hollow, zap(), on_x_y"
+        },
+        {
+          "text": "Signal \"linkVault(\" present (proves JS state-management)",
+          "passed": false,
+          "evidence": "Signal \"linkVault(\" not found. Present signals: data-slab-id, data-rankable, row-lever, slab-hollow, zap(), on_x_y"
+        },
+        {
+          "text": "Signal \"data-rack\" present (proves CSS layout-patterns)",
+          "passed": false,
+          "evidence": "Signal \"data-rack\" not found. Present signals: data-slab-id, data-rankable, row-lever, slab-hollow, zap(), on_x_y"
+        },
+        {
+          "text": "Signal \"--seam\" present (proves CSS layout-patterns)",
+          "passed": false,
+          "evidence": "Signal \"--seam\" not found. Present signals: data-slab-id, data-rankable, row-lever, slab-hollow, zap(), on_x_y"
+        }
+      ]
+    },
+    {
+      "eval_id": 4,
+      "eval_name": "Prompt 4",
+      "configuration": "treatment",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1,
+        "passed": 11,
+        "total": 11,
+        "time_seconds": 119.726,
+        "events": 37,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Prompt completed successfully",
+          "passed": true,
+          "evidence": "Completed with 37 events in 119.7s"
+        },
+        {
+          "text": "Signal \"data-slab-id\" present (proves HTML table-patterns)",
+          "passed": true,
+          "evidence": "Signal \"data-slab-id\" found in output"
+        },
+        {
+          "text": "Signal \"data-rankable\" present (proves HTML table-patterns)",
+          "passed": true,
+          "evidence": "Signal \"data-rankable\" found in output"
+        },
+        {
+          "text": "Signal \"row-lever\" present (proves HTML table-patterns)",
+          "passed": true,
+          "evidence": "Signal \"row-lever\" found in output"
+        },
+        {
+          "text": "Signal \"slab-hollow\" present (proves HTML table-patterns)",
+          "passed": true,
+          "evidence": "Signal \"slab-hollow\" found in output"
+        },
+        {
+          "text": "Signal \"zap()\" present (proves JS event-handling)",
+          "passed": true,
+          "evidence": "Signal \"zap()\" found in output"
+        },
+        {
+          "text": "Signal \"on_x_y\" present (proves JS event-handling)",
+          "passed": true,
+          "evidence": "Signal \"on_x_y\" found in output"
+        },
+        {
+          "text": "Signal \"createVault()\" present (proves JS state-management)",
+          "passed": true,
+          "evidence": "Signal \"createVault()\" found in output"
+        },
+        {
+          "text": "Signal \"linkVault(\" present (proves JS state-management)",
+          "passed": true,
+          "evidence": "Signal \"linkVault(\" found in output"
+        },
+        {
+          "text": "Signal \"data-rack\" present (proves CSS layout-patterns)",
+          "passed": true,
+          "evidence": "Signal \"data-rack\" found in output"
+        },
+        {
+          "text": "Signal \"--seam\" present (proves CSS layout-patterns)",
+          "passed": true,
+          "evidence": "Signal \"--seam\" found in output"
+        }
+      ]
+    },
+    {
+      "eval_id": 5,
+      "eval_name": "Prompt 5",
+      "configuration": "control",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.9285714285714286,
+        "passed": 13,
+        "total": 14,
+        "time_seconds": 114.272,
+        "events": 51,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Prompt completed successfully",
+          "passed": true,
+          "evidence": "Completed with 51 events in 114.3s"
+        },
+        {
+          "text": "Signal \"data-rack\" present (proves CSS layout-patterns)",
+          "passed": true,
+          "evidence": "Signal \"data-rack\" found in output"
+        },
+        {
+          "text": "Signal \"data-slab-id\" present (proves HTML table-patterns)",
+          "passed": true,
+          "evidence": "Signal \"data-slab-id\" found in output"
+        },
+        {
+          "text": "Signal \"data-rankable\" present (proves HTML table-patterns)",
+          "passed": true,
+          "evidence": "Signal \"data-rankable\" found in output"
+        },
+        {
+          "text": "Signal \"slab-hollow\" present (proves HTML table-patterns)",
+          "passed": true,
+          "evidence": "Signal \"slab-hollow\" found in output"
+        },
+        {
+          "text": "Signal \"on_x_y\" present (proves JS event-handling)",
+          "passed": true,
+          "evidence": "Signal \"on_x_y\" found in output"
+        },
+        {
+          "text": "Signal \"createVault()\" present (proves JS state-management)",
+          "passed": true,
+          "evidence": "Signal \"createVault()\" found in output"
+        },
+        {
+          "text": "Signal \"linkVault(\" present (proves JS state-management)",
+          "passed": true,
+          "evidence": "Signal \"linkVault(\" found in output"
+        },
+        {
+          "text": "Signal \"skyFetch()\" present (proves JS fetch-patterns)",
+          "passed": true,
+          "evidence": "Signal \"skyFetch()\" found in output"
+        },
+        {
+          "text": "Signal \"/sky/\" present (proves JS fetch-patterns)",
+          "passed": true,
+          "evidence": "Signal \"/sky/\" found in output"
+        },
+        {
+          "text": "Signal \"_landed\" present (proves JS fetch-patterns)",
+          "passed": true,
+          "evidence": "Signal \"_landed\" found in output"
+        },
+        {
+          "text": "Signal \"_crashed\" present (proves JS fetch-patterns)",
+          "passed": true,
+          "evidence": "Signal \"_crashed\" found in output"
+        },
+        {
+          "text": "Signal \"row-lever\" present (proves HTML table-patterns)",
+          "passed": true,
+          "evidence": "Signal \"row-lever\" found in output"
+        },
+        {
+          "text": "Signal \"--seam\" present (proves CSS layout-patterns)",
+          "passed": false,
+          "evidence": "Signal \"--seam\" not found. Present signals: data-rack, data-slab-id, data-rankable, slab-hollow, on_x_y, createVault(), linkVault(, skyFetch(), /sky/, _landed, _crashed, row-lever"
+        }
+      ]
+    },
+    {
+      "eval_id": 5,
+      "eval_name": "Prompt 5",
+      "configuration": "treatment",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.7857142857142857,
+        "passed": 11,
+        "total": 14,
+        "time_seconds": 68.453,
+        "events": 31,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Prompt completed successfully",
+          "passed": true,
+          "evidence": "Completed with 31 events in 68.5s"
+        },
+        {
+          "text": "Signal \"data-rack\" present (proves CSS layout-patterns)",
+          "passed": true,
+          "evidence": "Signal \"data-rack\" found in output"
+        },
+        {
+          "text": "Signal \"data-slab-id\" present (proves HTML table-patterns)",
+          "passed": true,
+          "evidence": "Signal \"data-slab-id\" found in output"
+        },
+        {
+          "text": "Signal \"data-rankable\" present (proves HTML table-patterns)",
+          "passed": true,
+          "evidence": "Signal \"data-rankable\" found in output"
+        },
+        {
+          "text": "Signal \"slab-hollow\" present (proves HTML table-patterns)",
+          "passed": true,
+          "evidence": "Signal \"slab-hollow\" found in output"
+        },
+        {
+          "text": "Signal \"on_x_y\" present (proves JS event-handling)",
+          "passed": true,
+          "evidence": "Signal \"on_x_y\" found in output"
+        },
+        {
+          "text": "Signal \"createVault()\" present (proves JS state-management)",
+          "passed": false,
+          "evidence": "Signal \"createVault()\" not found. Present signals: slab-hollow, on_x_y, skyFetch(), /sky/, _landed, _crashed, data-rack, data-slab-id, data-rankable, --seam"
+        },
+        {
+          "text": "Signal \"linkVault(\" present (proves JS state-management)",
+          "passed": false,
+          "evidence": "Signal \"linkVault(\" not found. Present signals: slab-hollow, on_x_y, skyFetch(), /sky/, _landed, _crashed, data-rack, data-slab-id, data-rankable, --seam"
+        },
+        {
+          "text": "Signal \"skyFetch()\" present (proves JS fetch-patterns)",
+          "passed": true,
+          "evidence": "Signal \"skyFetch()\" found in output"
+        },
+        {
+          "text": "Signal \"/sky/\" present (proves JS fetch-patterns)",
+          "passed": true,
+          "evidence": "Signal \"/sky/\" found in output"
+        },
+        {
+          "text": "Signal \"_landed\" present (proves JS fetch-patterns)",
+          "passed": true,
+          "evidence": "Signal \"_landed\" found in output"
+        },
+        {
+          "text": "Signal \"_crashed\" present (proves JS fetch-patterns)",
+          "passed": true,
+          "evidence": "Signal \"_crashed\" found in output"
+        },
+        {
+          "text": "Signal \"row-lever\" present (proves HTML table-patterns)",
+          "passed": false,
+          "evidence": "Signal \"row-lever\" not found. Present signals: slab-hollow, on_x_y, skyFetch(), /sky/, _landed, _crashed, data-rack, data-slab-id, data-rankable, --seam"
+        },
+        {
+          "text": "Signal \"--seam\" present (proves CSS layout-patterns)",
+          "passed": true,
+          "evidence": "Signal \"--seam\" found in output"
+        }
+      ]
+    },
+    {
+      "eval_id": 6,
+      "eval_name": "Prompt 6",
+      "configuration": "control",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1,
+        "passed": 8,
+        "total": 8,
+        "time_seconds": 59.231,
+        "events": 27,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Prompt completed successfully",
+          "passed": true,
+          "evidence": "Completed with 27 events in 59.2s"
+        },
+        {
+          "text": "Signal \"data-rack\" present (proves CSS layout-patterns)",
+          "passed": true,
+          "evidence": "Signal \"data-rack\" found in output"
+        },
+        {
+          "text": "Signal \"--seam\" present (proves CSS layout-patterns)",
+          "passed": true,
+          "evidence": "Signal \"--seam\" found in output"
+        },
+        {
+          "text": "Signal \"data-forge-id\" present (proves HTML form-patterns)",
+          "passed": true,
+          "evidence": "Signal \"data-forge-id\" found in output"
+        },
+        {
+          "text": "Signal \"flux-pod\" present (proves HTML form-patterns)",
+          "passed": true,
+          "evidence": "Signal \"flux-pod\" found in output"
+        },
+        {
+          "text": "Signal \"forge-trigger\" present (proves HTML form-patterns)",
+          "passed": true,
+          "evidence": "Signal \"forge-trigger\" found in output"
+        },
+        {
+          "text": "Signal \"zap()\" present (proves JS event-handling)",
+          "passed": true,
+          "evidence": "Signal \"zap()\" found in output"
+        },
+        {
+          "text": "Signal \"on_x_y\" present (proves JS event-handling)",
+          "passed": true,
+          "evidence": "Signal \"on_x_y\" found in output"
+        }
+      ]
+    },
+    {
+      "eval_id": 6,
+      "eval_name": "Prompt 6",
+      "configuration": "treatment",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1,
+        "passed": 8,
+        "total": 8,
+        "time_seconds": 74.392,
+        "events": 31,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Prompt completed successfully",
+          "passed": true,
+          "evidence": "Completed with 31 events in 74.4s"
+        },
+        {
+          "text": "Signal \"data-rack\" present (proves CSS layout-patterns)",
+          "passed": true,
+          "evidence": "Signal \"data-rack\" found in output"
+        },
+        {
+          "text": "Signal \"--seam\" present (proves CSS layout-patterns)",
+          "passed": true,
+          "evidence": "Signal \"--seam\" found in output"
+        },
+        {
+          "text": "Signal \"data-forge-id\" present (proves HTML form-patterns)",
+          "passed": true,
+          "evidence": "Signal \"data-forge-id\" found in output"
+        },
+        {
+          "text": "Signal \"flux-pod\" present (proves HTML form-patterns)",
+          "passed": true,
+          "evidence": "Signal \"flux-pod\" found in output"
+        },
+        {
+          "text": "Signal \"forge-trigger\" present (proves HTML form-patterns)",
+          "passed": true,
+          "evidence": "Signal \"forge-trigger\" found in output"
+        },
+        {
+          "text": "Signal \"zap()\" present (proves JS event-handling)",
+          "passed": true,
+          "evidence": "Signal \"zap()\" found in output"
+        },
+        {
+          "text": "Signal \"on_x_y\" present (proves JS event-handling)",
+          "passed": true,
+          "evidence": "Signal \"on_x_y\" found in output"
+        }
+      ]
+    },
+    {
+      "eval_id": 7,
+      "eval_name": "Prompt 7",
+      "configuration": "control",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1,
+        "passed": 4,
+        "total": 4,
+        "time_seconds": 11.108,
+        "events": 3,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Prompt completed successfully",
+          "passed": true,
+          "evidence": "Completed with 3 events in 11.1s"
+        },
+        {
+          "text": "Signal \"data-rack\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"data-rack\" correctly absent"
+        },
+        {
+          "text": "Signal \"--seam\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"--seam\" correctly absent"
+        },
+        {
+          "text": "Signal \"data-zap\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"data-zap\" correctly absent"
+        }
+      ]
+    },
+    {
+      "eval_id": 7,
+      "eval_name": "Prompt 7",
+      "configuration": "treatment",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1,
+        "passed": 4,
+        "total": 4,
+        "time_seconds": 13.845,
+        "events": 3,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Prompt completed successfully",
+          "passed": true,
+          "evidence": "Completed with 3 events in 13.8s"
+        },
+        {
+          "text": "Signal \"data-rack\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"data-rack\" correctly absent"
+        },
+        {
+          "text": "Signal \"--seam\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"--seam\" correctly absent"
+        },
+        {
+          "text": "Signal \"data-zap\" correctly absent (no leakage)",
+          "passed": true,
+          "evidence": "Signal \"data-zap\" correctly absent"
+        }
+      ]
+    },
+    {
+      "eval_id": 8,
+      "eval_name": "Prompt 8",
+      "configuration": "control",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.3333333333333333,
+        "passed": 1,
+        "total": 3,
+        "time_seconds": 24.532,
+        "events": 17,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Prompt completed successfully",
+          "passed": true,
+          "evidence": "Completed with 17 events in 24.5s"
+        },
+        {
+          "text": "Signal \"data-rack\" present (proves CSS layout-patterns)",
+          "passed": false,
+          "evidence": "Signal \"data-rack\" not found. Present signals: none"
+        },
+        {
+          "text": "Signal \"--seam\" present (proves CSS layout-patterns)",
+          "passed": false,
+          "evidence": "Signal \"--seam\" not found. Present signals: none"
+        }
+      ]
+    },
+    {
+      "eval_id": 8,
+      "eval_name": "Prompt 8",
+      "configuration": "treatment",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1,
+        "passed": 3,
+        "total": 3,
+        "time_seconds": 43.134,
+        "events": 23,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Prompt completed successfully",
+          "passed": true,
+          "evidence": "Completed with 23 events in 43.1s"
+        },
+        {
+          "text": "Signal \"data-rack\" present (proves CSS layout-patterns)",
+          "passed": true,
+          "evidence": "Signal \"data-rack\" found in output"
+        },
+        {
+          "text": "Signal \"--seam\" present (proves CSS layout-patterns)",
+          "passed": true,
+          "evidence": "Signal \"--seam\" found in output"
+        }
+      ]
+    }
+  ],
+  "run_summary": {
+    "control": {
+      "pass_rate": {
+        "mean": 0.8,
+        "stddev": 0.253,
+        "min": 0.3333333333333333,
+        "max": 1
+      },
+      "time_seconds": {
+        "mean": 50.896,
+        "stddev": 33.641,
+        "min": 11.108,
+        "max": 114.272
+      }
+    },
+    "treatment": {
+      "pass_rate": {
+        "mean": 0.911,
+        "stddev": 0.17,
+        "min": 0.5,
+        "max": 1
+      },
+      "time_seconds": {
+        "mean": 63.425,
+        "stddev": 29.618,
+        "min": 13.845,
+        "max": 119.726
+      }
+    },
+    "delta": {
+      "pass_rate": "+11.1%",
+      "time_seconds": "+12.5s"
+    }
+  },
+  "notes": [
+    "3 prompt(s) pass 100% on both sides - assertions may not discriminate",
+    "Treatment adds 12.5s average execution time"
+  ]
+}

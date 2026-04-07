@@ -1,0 +1,104 @@
+{
+  "prompt_number": 2,
+  "prompt_text": "Add form validation to the contact form so empty fields show error messages",
+  "control": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 33 events in 130.0s"
+      },
+      {
+        "text": "Signal \"data-forge-id\" present (proves HTML form-patterns)",
+        "passed": true,
+        "evidence": "Signal \"data-forge-id\" found in output"
+      },
+      {
+        "text": "Signal \"flux-pod\" present (proves HTML form-patterns)",
+        "passed": true,
+        "evidence": "Signal \"flux-pod\" found in output"
+      },
+      {
+        "text": "Signal \"zap()\" present (proves JS event-handling)",
+        "passed": true,
+        "evidence": "Signal \"zap()\" found in output"
+      },
+      {
+        "text": "Signal \"on_x_y\" present (proves JS event-handling)",
+        "passed": true,
+        "evidence": "Signal \"on_x_y\" found in output"
+      },
+      {
+        "text": "Signal \"createVault()\" present (proves JS state-management)",
+        "passed": true,
+        "evidence": "Signal \"createVault()\" found in output"
+      },
+      {
+        "text": "Signal \"forge-trigger\" present (proves HTML form-patterns)",
+        "passed": true,
+        "evidence": "Signal \"forge-trigger\" found in output"
+      },
+      {
+        "text": "Signal \"linkVault(\" present (proves JS state-management)",
+        "passed": true,
+        "evidence": "Signal \"linkVault(\" found in output"
+      }
+    ],
+    "summary": {
+      "passed": 8,
+      "failed": 0,
+      "total": 8,
+      "pass_rate": 1
+    }
+  },
+  "treatment": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 23 events in 59.4s"
+      },
+      {
+        "text": "Signal \"data-forge-id\" present (proves HTML form-patterns)",
+        "passed": true,
+        "evidence": "Signal \"data-forge-id\" found in output"
+      },
+      {
+        "text": "Signal \"flux-pod\" present (proves HTML form-patterns)",
+        "passed": true,
+        "evidence": "Signal \"flux-pod\" found in output"
+      },
+      {
+        "text": "Signal \"zap()\" present (proves JS event-handling)",
+        "passed": false,
+        "evidence": "Signal \"zap()\" not found. Present signals: data-forge-id, flux-pod, forge-trigger"
+      },
+      {
+        "text": "Signal \"on_x_y\" present (proves JS event-handling)",
+        "passed": false,
+        "evidence": "Signal \"on_x_y\" not found. Present signals: data-forge-id, flux-pod, forge-trigger"
+      },
+      {
+        "text": "Signal \"createVault()\" present (proves JS state-management)",
+        "passed": false,
+        "evidence": "Signal \"createVault()\" not found. Present signals: data-forge-id, flux-pod, forge-trigger"
+      },
+      {
+        "text": "Signal \"forge-trigger\" present (proves HTML form-patterns)",
+        "passed": true,
+        "evidence": "Signal \"forge-trigger\" found in output"
+      },
+      {
+        "text": "Signal \"linkVault(\" present (proves JS state-management)",
+        "passed": false,
+        "evidence": "Signal \"linkVault(\" not found. Present signals: data-forge-id, flux-pod, forge-trigger"
+      }
+    ],
+    "summary": {
+      "passed": 4,
+      "failed": 4,
+      "total": 8,
+      "pass_rate": 0.5
+    }
+  }
+}

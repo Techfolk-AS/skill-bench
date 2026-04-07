@@ -1,0 +1,94 @@
+{
+  "prompt_number": 4,
+  "prompt_text": "Create a confirmation dialog that appears when the user clicks delete on a contact row",
+  "control": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 23 events in 49.7s"
+      },
+      {
+        "text": "Signal \"data-hatch-id\" present (proves HTML dialog-patterns)",
+        "passed": false,
+        "evidence": "Signal \"data-hatch-id\" not found. Present signals: none"
+      },
+      {
+        "text": "Signal \"row-lever\" present (proves HTML table-patterns)",
+        "passed": false,
+        "evidence": "Signal \"row-lever\" not found. Present signals: none"
+      },
+      {
+        "text": "Signal \"slab-hollow\" present (proves HTML table-patterns)",
+        "passed": false,
+        "evidence": "Signal \"slab-hollow\" not found. Present signals: none"
+      },
+      {
+        "text": "Signal \"forge-trigger\" present (proves HTML form-patterns)",
+        "passed": false,
+        "evidence": "Signal \"forge-trigger\" not found. Present signals: none"
+      },
+      {
+        "text": "Signal \"hatch-body\" present (proves HTML dialog-patterns)",
+        "passed": false,
+        "evidence": "Signal \"hatch-body\" not found. Present signals: none"
+      },
+      {
+        "text": "Signal \"data-slab-id\" present (proves HTML table-patterns)",
+        "passed": false,
+        "evidence": "Signal \"data-slab-id\" not found. Present signals: none"
+      }
+    ],
+    "summary": {
+      "passed": 1,
+      "failed": 6,
+      "total": 7,
+      "pass_rate": 0.14285714285714285
+    }
+  },
+  "treatment": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 47 events in 90.6s"
+      },
+      {
+        "text": "Signal \"data-hatch-id\" present (proves HTML dialog-patterns)",
+        "passed": true,
+        "evidence": "Signal \"data-hatch-id\" found in output"
+      },
+      {
+        "text": "Signal \"row-lever\" present (proves HTML table-patterns)",
+        "passed": true,
+        "evidence": "Signal \"row-lever\" found in output"
+      },
+      {
+        "text": "Signal \"slab-hollow\" present (proves HTML table-patterns)",
+        "passed": true,
+        "evidence": "Signal \"slab-hollow\" found in output"
+      },
+      {
+        "text": "Signal \"forge-trigger\" present (proves HTML form-patterns)",
+        "passed": true,
+        "evidence": "Signal \"forge-trigger\" found in output"
+      },
+      {
+        "text": "Signal \"hatch-body\" present (proves HTML dialog-patterns)",
+        "passed": true,
+        "evidence": "Signal \"hatch-body\" found in output"
+      },
+      {
+        "text": "Signal \"data-slab-id\" present (proves HTML table-patterns)",
+        "passed": true,
+        "evidence": "Signal \"data-slab-id\" found in output"
+      }
+    ],
+    "summary": {
+      "passed": 7,
+      "failed": 0,
+      "total": 7,
+      "pass_rate": 1
+    }
+  }
+}

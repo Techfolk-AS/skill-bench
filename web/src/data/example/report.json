@@ -1,0 +1,351 @@
+{
+  "version": 1,
+  "date": "2026-03-10",
+  "experiment": {
+    "name": "example",
+    "control": "No changes (baseline)",
+    "treatment": "Added skill-index hints to CLAUDE.md",
+    "cliVersion": "2.1.87 (Claude Code)"
+  },
+  "prompts": [
+    {
+      "number": 1,
+      "text": "Add a modal dialog with close button",
+      "control": {
+        "events": 42,
+        "durationMs": 12300,
+        "skillsLoaded": [
+          "html"
+        ],
+        "subskillReads": {
+          "html": [
+            "dialog-patterns.md"
+          ]
+        },
+        "toolCounts": {
+          "Read": 5,
+          "Write": 2,
+          "Skill": 1
+        },
+        "signals": [
+          "data-hatch-id",
+          "hatch-trigger"
+        ]
+      },
+      "treatment": {
+        "events": 38,
+        "durationMs": 10100,
+        "skillsLoaded": [
+          "html"
+        ],
+        "subskillReads": {
+          "html": [
+            "dialog-patterns.md"
+          ]
+        },
+        "toolCounts": {
+          "Read": 4,
+          "Write": 2,
+          "Skill": 1
+        },
+        "signals": [
+          "data-hatch-id",
+          "hatch-trigger",
+          "hatch-body"
+        ]
+      }
+    },
+    {
+      "number": 2,
+      "text": "Style the page with a dark theme",
+      "control": {
+        "events": 35,
+        "durationMs": 9800,
+        "skillsLoaded": [
+          "css"
+        ],
+        "subskillReads": {
+          "css": [
+            "theming.md"
+          ]
+        },
+        "toolCounts": {
+          "Read": 3,
+          "Write": 2,
+          "Skill": 1
+        },
+        "signals": [
+          "data-coat",
+          "--ink-"
+        ]
+      },
+      "treatment": {
+        "events": 31,
+        "durationMs": 8200,
+        "skillsLoaded": [
+          "css"
+        ],
+        "subskillReads": {
+          "css": [
+            "theming.md"
+          ]
+        },
+        "toolCounts": {
+          "Read": 3,
+          "Write": 1,
+          "Skill": 1
+        },
+        "signals": [
+          "data-coat",
+          "--ink-",
+          ".plate-"
+        ]
+      }
+    },
+    {
+      "number": 3,
+      "text": "Create a sortable data table",
+      "control": {
+        "events": 55,
+        "durationMs": 18400,
+        "skillsLoaded": [],
+        "subskillReads": {},
+        "toolCounts": {
+          "Read": 2,
+          "Write": 3,
+          "Edit": 1
+        },
+        "signals": []
+      },
+      "treatment": {
+        "events": 48,
+        "durationMs": 15200,
+        "skillsLoaded": [
+          "html"
+        ],
+        "subskillReads": {
+          "html": [
+            "table-patterns.md"
+          ]
+        },
+        "toolCounts": {
+          "Read": 4,
+          "Write": 2,
+          "Skill": 1,
+          "Edit": 1
+        },
+        "signals": [
+          "data-slab-id",
+          "data-rankable",
+          "row-lever"
+        ]
+      }
+    }
+  ],
+  "totals": {
+    "control": {
+      "sessions": 3,
+      "prompts": 3,
+      "events": 132,
+      "skillsLoaded": [
+        "html",
+        "css"
+      ],
+      "toolCounts": {
+        "Read": 10,
+        "Write": 7,
+        "Skill": 2,
+        "Edit": 1
+      },
+      "subskillReads": {
+        "html": [
+          "dialog-patterns.md"
+        ],
+        "css": [
+          "theming.md"
+        ]
+      },
+      "signals": [
+        "data-hatch-id",
+        "hatch-trigger",
+        "data-coat",
+        "--ink-"
+      ]
+    },
+    "treatment": {
+      "sessions": 3,
+      "prompts": 3,
+      "events": 117,
+      "skillsLoaded": [
+        "html",
+        "css"
+      ],
+      "toolCounts": {
+        "Read": 11,
+        "Write": 5,
+        "Skill": 3,
+        "Edit": 1
+      },
+      "subskillReads": {
+        "html": [
+          "dialog-patterns.md",
+          "table-patterns.md"
+        ],
+        "css": [
+          "theming.md"
+        ]
+      },
+      "signals": [
+        "data-hatch-id",
+        "hatch-trigger",
+        "hatch-body",
+        "data-coat",
+        "--ink-",
+        ".plate-",
+        "data-slab-id",
+        "data-rankable",
+        "row-lever"
+      ]
+    }
+  },
+  "signalMap": {
+    "data-rack": {
+      "control": false,
+      "treatment": false,
+      "proves": "CSS layout-patterns"
+    },
+    "--seam": {
+      "control": false,
+      "treatment": false,
+      "proves": "CSS layout-patterns"
+    },
+    "data-zap": {
+      "control": false,
+      "treatment": false,
+      "proves": "CSS animation-patterns"
+    },
+    "--pulse": {
+      "control": false,
+      "treatment": false,
+      "proves": "CSS animation-patterns"
+    },
+    "data-coat": {
+      "control": true,
+      "treatment": true,
+      "proves": "CSS theming"
+    },
+    "--ink-": {
+      "control": true,
+      "treatment": true,
+      "proves": "CSS theming"
+    },
+    ".plate-": {
+      "control": false,
+      "treatment": true,
+      "proves": "CSS theming"
+    },
+    "data-forge-id": {
+      "control": false,
+      "treatment": false,
+      "proves": "HTML form-patterns"
+    },
+    "flux-pod": {
+      "control": false,
+      "treatment": false,
+      "proves": "HTML form-patterns"
+    },
+    "forge-trigger": {
+      "control": false,
+      "treatment": false,
+      "proves": "HTML form-patterns"
+    },
+    "data-hatch-id": {
+      "control": true,
+      "treatment": true,
+      "proves": "HTML dialog-patterns"
+    },
+    "hatch-trigger": {
+      "control": true,
+      "treatment": true,
+      "proves": "HTML dialog-patterns"
+    },
+    "hatch-body": {
+      "control": false,
+      "treatment": true,
+      "proves": "HTML dialog-patterns"
+    },
+    "data-slab-id": {
+      "control": false,
+      "treatment": true,
+      "proves": "HTML table-patterns"
+    },
+    "data-rankable": {
+      "control": false,
+      "treatment": true,
+      "proves": "HTML table-patterns"
+    },
+    "row-lever": {
+      "control": false,
+      "treatment": true,
+      "proves": "HTML table-patterns"
+    },
+    "slab-hollow": {
+      "control": false,
+      "treatment": false,
+      "proves": "HTML table-patterns"
+    },
+    "zap()": {
+      "control": false,
+      "treatment": false,
+      "proves": "JS event-handling"
+    },
+    "on_x_y": {
+      "control": false,
+      "treatment": false,
+      "proves": "JS event-handling"
+    },
+    "createVault()": {
+      "control": false,
+      "treatment": false,
+      "proves": "JS state-management"
+    },
+    "linkVault(": {
+      "control": false,
+      "treatment": false,
+      "proves": "JS state-management"
+    },
+    "vault.tap(": {
+      "control": false,
+      "treatment": false,
+      "proves": "JS state-management"
+    },
+    "skyFetch()": {
+      "control": false,
+      "treatment": false,
+      "proves": "JS fetch-patterns"
+    },
+    "/sky/": {
+      "control": false,
+      "treatment": false,
+      "proves": "JS fetch-patterns"
+    },
+    "_landed": {
+      "control": false,
+      "treatment": false,
+      "proves": "JS fetch-patterns"
+    },
+    "_crashed": {
+      "control": false,
+      "treatment": false,
+      "proves": "JS fetch-patterns"
+    }
+  },
+  "summary": {
+    "skillMatchRate": "2/3",
+    "refMatchRate": "2/3",
+    "toolMatchRate": "0/3",
+    "signalMatchRate": "20/26",
+    "conclusion": "differences_detected",
+    "details": "skills differed in 1/3 prompts; subskill refs differed in 1/3 prompts; 6/26 verification signals differed"
+  }
+}

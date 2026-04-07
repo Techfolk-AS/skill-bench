@@ -1,0 +1,16 @@
+{
+  "experiment": "short-vs-long-descriptions",
+  "date": "2026-03-30",
+  "prompts_graded": 9,
+  "control": {
+    "passed": 24,
+    "total": 32,
+    "pass_rate": 0.75
+  },
+  "treatment": {
+    "passed": 27,
+    "total": 32,
+    "pass_rate": 0.84375
+  },
+  "delta_pass_rate": 0.09375
+}

@@ -1,0 +1,81 @@
+diff --color -ru ProjectA/.claude/skills/css/SKILL.md ProjectB/.claude/skills/css/SKILL.md
+--- ProjectA/.claude/skills/css/SKILL.md	2026-03-31 11:57:02
++++ ProjectB/.claude/skills/css/SKILL.md	2026-03-31 11:57:49
+@@ -7,18 +7,9 @@
+ 
+ # CSS Conventions
+ 
+-This project uses custom CSS conventions. Layouts use a `data-rack` attribute system.
++Read at least one reference below matching your task. Do NOT proceed on training knowledge alone.
+ 
+-## References
+-
+-When building layouts, working with spacing, or creating grid/flex containers:
+-- `references/layout-patterns.md` — layout container system, spacing variables, nesting rules
+-
+-When adding animations, transitions, or motion effects:
+-- `references/animation-patterns.md` — animation attributes, timing variables, reduced motion
+-
+-When implementing themes, dark mode, or color systems:
+-- `references/theming.md` — theme switching, color custom properties, themed backgrounds
+-
+-General CSS conventions:
+-- `references/best-practices.md` — naming, selectors, responsive approach
++1. When building layouts, working with spacing, or creating grid/flex containers, read `references/layout-patterns.md`
++2. When adding animations, transitions, or motion effects, read `references/animation-patterns.md`
++3. When implementing themes, dark mode, or color systems, read `references/theming.md`
++4. For general CSS conventions, read `references/best-practices.md`
+diff --color -ru ProjectA/.claude/skills/html/SKILL.md ProjectB/.claude/skills/html/SKILL.md
+--- ProjectA/.claude/skills/html/SKILL.md	2026-03-31 11:57:02
++++ ProjectB/.claude/skills/html/SKILL.md	2026-03-31 12:00:10
+@@ -7,18 +7,9 @@
+ 
+ # HTML Conventions
+ 
+-This project uses custom HTML conventions. Forms use a `flux-pod` wrapper system.
++Read at least one reference below matching your task. Do NOT proceed on training knowledge alone.
+ 
+-## References
+-
+-When building forms, adding inputs, or creating submit buttons:
+-- `references/form-patterns.md` — form identification, field wrapping, submit buttons, validation
+-
+-When creating modals, dialogs, or confirmation prompts:
+-- `references/dialog-patterns.md` — dialog identification, triggers, content structure, close buttons
+-
+-When building data tables, sortable lists, or tabular displays:
+-- `references/table-patterns.md` — table identification, sortable columns, row actions, empty states
+-
+-General HTML conventions:
+-- `references/best-practices.md` — semantic elements, accessibility, markup structure
++1. When building forms, adding inputs, or creating submit buttons, read `references/form-patterns.md`
++2. When creating modals, dialogs, or confirmation prompts, read `references/dialog-patterns.md`
++3. When building data tables, sortable lists, or tabular displays, read `references/table-patterns.md`
++4. For general HTML conventions, read `references/best-practices.md`
+diff --color -ru ProjectA/.claude/skills/javascript/SKILL.md ProjectB/.claude/skills/javascript/SKILL.md
+--- ProjectA/.claude/skills/javascript/SKILL.md	2026-03-31 11:57:02
++++ ProjectB/.claude/skills/javascript/SKILL.md	2026-03-31 12:00:11
+@@ -7,18 +7,9 @@
+ 
+ # JavaScript Conventions
+ 
+-This project uses custom JS conventions. Events use a `zap()` binding function.
++Read at least one reference below matching your task. Do NOT proceed on training knowledge alone.
+ 
+-## References
+-
+-When adding event listeners, handling clicks, or writing interactive behavior:
+-- `references/event-handling.md` — event binding API, handler naming, event delegation
+-
+-When managing state, creating reactive UI updates, or sharing data between components:
+-- `references/state-management.md` — state containers, DOM binding, side effect subscriptions
+-
+-When fetching data from APIs, loading resources, or making HTTP requests:
+-- `references/fetch-patterns.md` — custom fetch wrapper, endpoint prefix, callback naming
+-
+-General JS conventions:
+-- `references/best-practices.md` — ES modules, error handling, naming conventions
++1. When adding event listeners, handling clicks, or writing interactive behavior, read `references/event-handling.md`
++2. When managing state, creating reactive UI updates, or sharing data between components, read `references/state-management.md`
++3. When fetching data from APIs, loading resources, or making HTTP requests, read `references/fetch-patterns.md`
++4. For general JS conventions, read `references/best-practices.md`

@@ -1,0 +1,751 @@
+{
+  "version": 1,
+  "date": "2026-03-18",
+  "experiment": {
+    "name": "forced-eval-hook-v4",
+    "control": "No changes (baseline)",
+    "treatment": "ProjectB change: Add `skill-forced-eval-hook.sh` that outputs forced evaluation instructions on every prompt, requiring Claude to reason about each skill YES/NO and activate via Skill tool before proceeding."
+  },
+  "prompts": [
+    {
+      "number": 1,
+      "text": "Create a blog layout with a sidebar and main content area",
+      "control": {
+        "events": 21,
+        "durationMs": 68505,
+        "skillsLoaded": [
+          "html"
+        ],
+        "subskillReads": {
+          "css": [
+            "layout-patterns.md",
+            "theming.md"
+          ],
+          "html": [
+            "best-practices.md"
+          ]
+        },
+        "toolCounts": {
+          "Glob": 1,
+          "Read": 6,
+          "Skill": 1,
+          "Write": 2
+        },
+        "signals": [
+          "data-rack",
+          "--seam",
+          "data-coat",
+          "--ink-",
+          ".plate-"
+        ]
+      },
+      "treatment": {
+        "events": 19,
+        "durationMs": 49470,
+        "skillsLoaded": [
+          "css",
+          "html"
+        ],
+        "subskillReads": {
+          "css": [
+            "layout-patterns.md"
+          ],
+          "html": [
+            "best-practices.md"
+          ]
+        },
+        "toolCounts": {
+          "Skill": 2,
+          "Read": 4,
+          "Glob": 1,
+          "Write": 1,
+          "Edit": 1
+        },
+        "signals": [
+          "data-rack",
+          "--seam"
+        ]
+      }
+    },
+    {
+      "number": 2,
+      "text": "Create a contact form with name, email, and message fields",
+      "control": {
+        "events": 13,
+        "durationMs": 19170,
+        "skillsLoaded": [
+          "html"
+        ],
+        "subskillReads": {
+          "html": [
+            "form-patterns.md"
+          ]
+        },
+        "toolCounts": {
+          "Skill": 1,
+          "Read": 2,
+          "Bash": 2,
+          "Edit": 1
+        },
+        "signals": [
+          "data-forge-id",
+          "flux-pod",
+          "forge-trigger"
+        ]
+      },
+      "treatment": {
+        "events": 35,
+        "durationMs": 86094,
+        "skillsLoaded": [
+          "css",
+          "html",
+          "javascript"
+        ],
+        "subskillReads": {
+          "html": [
+            "form-patterns.md"
+          ],
+          "javascript": [
+            "event-handling.md"
+          ],
+          "css": [
+            "layout-patterns.md"
+          ]
+        },
+        "toolCounts": {
+          "Skill": 3,
+          "Read": 6,
+          "Glob": 1,
+          "Write": 2,
+          "Edit": 5
+        },
+        "signals": [
+          "data-forge-id",
+          "zap()",
+          "on_x_y",
+          "data-rack",
+          "flux-pod",
+          "forge-trigger",
+          "--seam"
+        ]
+      }
+    },
+    {
+      "number": 3,
+      "text": "Add a click handler to toggle a mobile navigation menu",
+      "control": {
+        "events": 21,
+        "durationMs": 29325,
+        "skillsLoaded": [
+          "html"
+        ],
+        "subskillReads": {
+          "html": [
+            "best-practices.md"
+          ]
+        },
+        "toolCounts": {
+          "Glob": 1,
+          "Read": 4,
+          "Skill": 1,
+          "Edit": 4
+        },
+        "signals": []
+      },
+      "treatment": {
+        "events": 31,
+        "durationMs": 52283,
+        "skillsLoaded": [
+          "html",
+          "css",
+          "javascript"
+        ],
+        "subskillReads": {
+          "javascript": [
+            "event-handling.md"
+          ],
+          "css": [
+            "best-practices.md"
+          ],
+          "html": [
+            "best-practices.md"
+          ]
+        },
+        "toolCounts": {
+          "Skill": 3,
+          "Read": 6,
+          "Glob": 1,
+          "Edit": 5
+        },
+        "signals": []
+      }
+    },
+    {
+      "number": 4,
+      "text": "Build a sortable data table for a list of users",
+      "control": {
+        "events": 33,
+        "durationMs": 81023,
+        "skillsLoaded": [
+          "html",
+          "javascript",
+          "css"
+        ],
+        "subskillReads": {
+          "html": [
+            "table-patterns.md"
+          ],
+          "javascript": [
+            "event-handling.md"
+          ],
+          "css": [
+            "best-practices.md"
+          ]
+        },
+        "toolCounts": {
+          "Skill": 3,
+          "Bash": 2,
+          "Read": 6,
+          "Glob": 1,
+          "Write": 2,
+          "Edit": 2
+        },
+        "signals": [
+          "data-slab-id",
+          "data-rankable",
+          "row-lever",
+          "slab-hollow",
+          "zap()",
+          "on_x_y"
+        ]
+      },
+      "treatment": {
+        "events": 37,
+        "durationMs": 119726,
+        "skillsLoaded": [
+          "html",
+          "javascript",
+          "css"
+        ],
+        "subskillReads": {
+          "html": [
+            "table-patterns.md"
+          ],
+          "css": [
+            "layout-patterns.md"
+          ],
+          "javascript": [
+            "event-handling.md",
+            "state-management.md"
+          ]
+        },
+        "toolCounts": {
+          "Skill": 3,
+          "Read": 7,
+          "Bash": 3,
+          "Write": 3,
+          "Edit": 2
+        },
+        "signals": [
+          "data-slab-id",
+          "data-rankable",
+          "row-lever",
+          "slab-hollow",
+          "zap()",
+          "on_x_y",
+          "createVault()",
+          "linkVault(",
+          "data-rack",
+          "--seam"
+        ]
+      }
+    },
+    {
+      "number": 5,
+      "text": "Fetch and display a list of products from the API",
+      "control": {
+        "events": 51,
+        "durationMs": 114272,
+        "skillsLoaded": [
+          "javascript",
+          "html"
+        ],
+        "subskillReads": {
+          "javascript": [
+            "fetch-patterns.md",
+            "state-management.md",
+            "best-practices.md"
+          ],
+          "html": [
+            "table-patterns.md"
+          ]
+        },
+        "toolCounts": {
+          "Agent": 1,
+          "Bash": 2,
+          "Read": 12,
+          "Skill": 2,
+          "Glob": 1,
+          "Write": 3,
+          "Edit": 3
+        },
+        "signals": [
+          "data-rack",
+          "data-slab-id",
+          "data-rankable",
+          "slab-hollow",
+          "on_x_y",
+          "createVault()",
+          "linkVault(",
+          "skyFetch()",
+          "/sky/",
+          "_landed",
+          "_crashed",
+          "row-lever"
+        ]
+      },
+      "treatment": {
+        "events": 31,
+        "durationMs": 68453,
+        "skillsLoaded": [
+          "html",
+          "css",
+          "javascript"
+        ],
+        "subskillReads": {
+          "javascript": [
+            "fetch-patterns.md"
+          ],
+          "css": [
+            "layout-patterns.md"
+          ],
+          "html": [
+            "table-patterns.md"
+          ]
+        },
+        "toolCounts": {
+          "Skill": 3,
+          "Read": 6,
+          "Glob": 1,
+          "Write": 1,
+          "Edit": 4
+        },
+        "signals": [
+          "slab-hollow",
+          "on_x_y",
+          "skyFetch()",
+          "/sky/",
+          "_landed",
+          "_crashed",
+          "data-rack",
+          "data-slab-id",
+          "data-rankable",
+          "--seam"
+        ]
+      }
+    },
+    {
+      "number": 6,
+      "text": "Build a newsletter signup form with a two-column layout",
+      "control": {
+        "events": 27,
+        "durationMs": 59231,
+        "skillsLoaded": [
+          "html"
+        ],
+        "subskillReads": {
+          "html": [
+            "form-patterns.md",
+            "best-practices.md"
+          ],
+          "css": [
+            "layout-patterns.md"
+          ],
+          "javascript": [
+            "event-handling.md"
+          ]
+        },
+        "toolCounts": {
+          "Glob": 1,
+          "Read": 7,
+          "Skill": 1,
+          "Write": 3,
+          "Edit": 1
+        },
+        "signals": [
+          "data-rack",
+          "--seam",
+          "data-forge-id",
+          "flux-pod",
+          "forge-trigger",
+          "zap()",
+          "on_x_y"
+        ]
+      },
+      "treatment": {
+        "events": 31,
+        "durationMs": 74392,
+        "skillsLoaded": [
+          "css",
+          "javascript",
+          "html"
+        ],
+        "subskillReads": {
+          "html": [
+            "form-patterns.md"
+          ],
+          "css": [
+            "layout-patterns.md"
+          ],
+          "javascript": [
+            "event-handling.md"
+          ]
+        },
+        "toolCounts": {
+          "Skill": 3,
+          "Read": 6,
+          "Bash": 2,
+          "Write": 3,
+          "Edit": 1
+        },
+        "signals": [
+          "data-rack",
+          "--seam",
+          "data-forge-id",
+          "flux-pod",
+          "forge-trigger",
+          "zap()",
+          "on_x_y"
+        ]
+      }
+    },
+    {
+      "number": 7,
+      "text": "Write a Python script to process CSV files",
+      "control": {
+        "events": 3,
+        "durationMs": 11108,
+        "skillsLoaded": [],
+        "subskillReads": {},
+        "toolCounts": {
+          "Write": 1
+        },
+        "signals": []
+      },
+      "treatment": {
+        "events": 3,
+        "durationMs": 13845,
+        "skillsLoaded": [],
+        "subskillReads": {},
+        "toolCounts": {
+          "Write": 1
+        },
+        "signals": []
+      }
+    },
+    {
+      "number": 8,
+      "text": "Make me a simple webpage with a header, some content, and a footer",
+      "control": {
+        "events": 17,
+        "durationMs": 24532,
+        "skillsLoaded": [
+          "html"
+        ],
+        "subskillReads": {
+          "html": [
+            "best-practices.md"
+          ]
+        },
+        "toolCounts": {
+          "Bash": 2,
+          "Read": 4,
+          "Skill": 1,
+          "Write": 1
+        },
+        "signals": []
+      },
+      "treatment": {
+        "events": 23,
+        "durationMs": 43134,
+        "skillsLoaded": [
+          "css",
+          "html"
+        ],
+        "subskillReads": {
+          "css": [
+            "best-practices.md",
+            "layout-patterns.md"
+          ],
+          "html": [
+            "best-practices.md"
+          ]
+        },
+        "toolCounts": {
+          "Skill": 2,
+          "Read": 5,
+          "Glob": 2,
+          "Edit": 2
+        },
+        "signals": [
+          "data-rack",
+          "--seam"
+        ]
+      }
+    }
+  ],
+  "totals": {
+    "control": {
+      "sessions": 8,
+      "prompts": 8,
+      "events": 186,
+      "skillsLoaded": [
+        "html",
+        "javascript",
+        "css"
+      ],
+      "toolCounts": {
+        "Glob": 5,
+        "Read": 41,
+        "Skill": 10,
+        "Write": 12,
+        "Bash": 8,
+        "Edit": 11,
+        "Agent": 1
+      },
+      "subskillReads": {
+        "css": [
+          "layout-patterns.md",
+          "theming.md",
+          "best-practices.md"
+        ],
+        "html": [
+          "best-practices.md",
+          "form-patterns.md",
+          "table-patterns.md"
+        ],
+        "javascript": [
+          "event-handling.md",
+          "fetch-patterns.md",
+          "state-management.md",
+          "best-practices.md"
+        ]
+      },
+      "signals": [
+        "data-rack",
+        "--seam",
+        "data-coat",
+        "--ink-",
+        ".plate-",
+        "data-forge-id",
+        "flux-pod",
+        "forge-trigger",
+        "data-slab-id",
+        "data-rankable",
+        "row-lever",
+        "slab-hollow",
+        "zap()",
+        "on_x_y",
+        "createVault()",
+        "linkVault(",
+        "skyFetch()",
+        "/sky/",
+        "_landed",
+        "_crashed"
+      ]
+    },
+    "treatment": {
+      "sessions": 8,
+      "prompts": 8,
+      "events": 210,
+      "skillsLoaded": [
+        "css",
+        "html",
+        "javascript"
+      ],
+      "toolCounts": {
+        "Skill": 19,
+        "Read": 40,
+        "Glob": 6,
+        "Write": 11,
+        "Edit": 20,
+        "Bash": 5
+      },
+      "subskillReads": {
+        "css": [
+          "layout-patterns.md",
+          "best-practices.md"
+        ],
+        "html": [
+          "best-practices.md",
+          "form-patterns.md",
+          "table-patterns.md"
+        ],
+        "javascript": [
+          "event-handling.md",
+          "state-management.md",
+          "fetch-patterns.md"
+        ]
+      },
+      "signals": [
+        "data-rack",
+        "--seam",
+        "data-forge-id",
+        "zap()",
+        "on_x_y",
+        "flux-pod",
+        "forge-trigger",
+        "data-slab-id",
+        "data-rankable",
+        "row-lever",
+        "slab-hollow",
+        "createVault()",
+        "linkVault(",
+        "skyFetch()",
+        "/sky/",
+        "_landed",
+        "_crashed"
+      ]
+    }
+  },
+  "signalMap": {
+    "data-rack": {
+      "control": true,
+      "treatment": true,
+      "proves": "CSS layout-patterns"
+    },
+    "--seam": {
+      "control": true,
+      "treatment": true,
+      "proves": "CSS layout-patterns"
+    },
+    "data-zap": {
+      "control": false,
+      "treatment": false,
+      "proves": "CSS animation-patterns"
+    },
+    "--pulse": {
+      "control": false,
+      "treatment": false,
+      "proves": "CSS animation-patterns"
+    },
+    "data-coat": {
+      "control": true,
+      "treatment": false,
+      "proves": "CSS theming"
+    },
+    "--ink-": {
+      "control": true,
+      "treatment": false,
+      "proves": "CSS theming"
+    },
+    ".plate-": {
+      "control": true,
+      "treatment": false,
+      "proves": "CSS theming"
+    },
+    "data-forge-id": {
+      "control": true,
+      "treatment": true,
+      "proves": "HTML form-patterns"
+    },
+    "flux-pod": {
+      "control": true,
+      "treatment": true,
+      "proves": "HTML form-patterns"
+    },
+    "forge-trigger": {
+      "control": true,
+      "treatment": true,
+      "proves": "HTML form-patterns"
+    },
+    "data-hatch-id": {
+      "control": false,
+      "treatment": false,
+      "proves": "HTML dialog-patterns"
+    },
+    "hatch-trigger": {
+      "control": false,
+      "treatment": false,
+      "proves": "HTML dialog-patterns"
+    },
+    "hatch-body": {
+      "control": false,
+      "treatment": false,
+      "proves": "HTML dialog-patterns"
+    },
+    "data-slab-id": {
+      "control": true,
+      "treatment": true,
+      "proves": "HTML table-patterns"
+    },
+    "data-rankable": {
+      "control": true,
+      "treatment": true,
+      "proves": "HTML table-patterns"
+    },
+    "row-lever": {
+      "control": true,
+      "treatment": true,
+      "proves": "HTML table-patterns"
+    },
+    "slab-hollow": {
+      "control": true,
+      "treatment": true,
+      "proves": "HTML table-patterns"
+    },
+    "zap()": {
+      "control": true,
+      "treatment": true,
+      "proves": "JS event-handling"
+    },
+    "on_x_y": {
+      "control": true,
+      "treatment": true,
+      "proves": "JS event-handling"
+    },
+    "createVault()": {
+      "control": true,
+      "treatment": true,
+      "proves": "JS state-management"
+    },
+    "linkVault(": {
+      "control": true,
+      "treatment": true,
+      "proves": "JS state-management"
+    },
+    "vault.tap(": {
+      "control": false,
+      "treatment": false,
+      "proves": "JS state-management"
+    },
+    "skyFetch()": {
+      "control": true,
+      "treatment": true,
+      "proves": "JS fetch-patterns"
+    },
+    "/sky/": {
+      "control": true,
+      "treatment": true,
+      "proves": "JS fetch-patterns"
+    },
+    "_landed": {
+      "control": true,
+      "treatment": true,
+      "proves": "JS fetch-patterns"
+    },
+    "_crashed": {
+      "control": true,
+      "treatment": true,
+      "proves": "JS fetch-patterns"
+    }
+  },
+  "summary": {
+    "skillMatchRate": "2/8",
+    "refMatchRate": "1/8",
+    "toolMatchRate": "1/8",
+    "signalMatchRate": "23/26",
+    "conclusion": "differences_detected",
+    "details": "skills differed in 6/8 prompts; subskill refs differed in 7/8 prompts; 3/26 verification signals differed"
+  }
+}

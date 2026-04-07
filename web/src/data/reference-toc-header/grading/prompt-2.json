@@ -1,0 +1,54 @@
+{
+  "prompt_number": 2,
+  "prompt_text": "Add a dark mode toggle button that switches between light and dark themes",
+  "control": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 33 events in 66.8s"
+      },
+      {
+        "text": "Signal \"data-coat\" present (proves CSS theming)",
+        "passed": true,
+        "evidence": "Signal \"data-coat\" found in output"
+      },
+      {
+        "text": "Signal \"--ink-\" present (proves CSS theming)",
+        "passed": true,
+        "evidence": "Signal \"--ink-\" found in output"
+      }
+    ],
+    "summary": {
+      "passed": 3,
+      "failed": 0,
+      "total": 3,
+      "pass_rate": 1
+    }
+  },
+  "treatment": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 37 events in 46.1s"
+      },
+      {
+        "text": "Signal \"data-coat\" present (proves CSS theming)",
+        "passed": false,
+        "evidence": "Signal \"data-coat\" not found. Present signals: none"
+      },
+      {
+        "text": "Signal \"--ink-\" present (proves CSS theming)",
+        "passed": false,
+        "evidence": "Signal \"--ink-\" not found. Present signals: none"
+      }
+    ],
+    "summary": {
+      "passed": 1,
+      "failed": 2,
+      "total": 3,
+      "pass_rate": 0.3333333333333333
+    }
+  }
+}

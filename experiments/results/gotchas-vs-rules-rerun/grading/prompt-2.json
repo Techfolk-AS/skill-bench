@@ -1,0 +1,74 @@
+{
+  "prompt_number": 2,
+  "prompt_text": "Add a dark mode toggle button that switches between light and dark themes",
+  "control": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 43 events in 149.9s"
+      },
+      {
+        "text": "Signal \"data-coat\" present (proves CSS theming)",
+        "passed": true,
+        "evidence": "Signal \"data-coat\" found in output"
+      },
+      {
+        "text": "Signal \"zap()\" present (proves JS event-handling)",
+        "passed": true,
+        "evidence": "Signal \"zap()\" found in output"
+      },
+      {
+        "text": "Signal \"on_x_y\" present (proves JS event-handling)",
+        "passed": true,
+        "evidence": "Signal \"on_x_y\" found in output"
+      },
+      {
+        "text": "Signal \"--ink-\" present (proves CSS theming)",
+        "passed": true,
+        "evidence": "Signal \"--ink-\" found in output"
+      }
+    ],
+    "summary": {
+      "passed": 5,
+      "failed": 0,
+      "total": 5,
+      "pass_rate": 1
+    }
+  },
+  "treatment": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 37 events in 99.0s"
+      },
+      {
+        "text": "Signal \"data-coat\" present (proves CSS theming)",
+        "passed": true,
+        "evidence": "Signal \"data-coat\" found in output"
+      },
+      {
+        "text": "Signal \"zap()\" present (proves JS event-handling)",
+        "passed": false,
+        "evidence": "Signal \"zap()\" not found. Present signals: data-coat, --ink-"
+      },
+      {
+        "text": "Signal \"on_x_y\" present (proves JS event-handling)",
+        "passed": false,
+        "evidence": "Signal \"on_x_y\" not found. Present signals: data-coat, --ink-"
+      },
+      {
+        "text": "Signal \"--ink-\" present (proves CSS theming)",
+        "passed": true,
+        "evidence": "Signal \"--ink-\" found in output"
+      }
+    ],
+    "summary": {
+      "passed": 3,
+      "failed": 2,
+      "total": 5,
+      "pass_rate": 0.6
+    }
+  }
+}

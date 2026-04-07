@@ -1,0 +1,94 @@
+{
+  "prompt_number": 5,
+  "prompt_text": "Add click-to-sort functionality to the contact table columns",
+  "control": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 35 events in 93.0s"
+      },
+      {
+        "text": "Signal \"data-rankable\" present (proves HTML table-patterns)",
+        "passed": false,
+        "evidence": "Signal \"data-rankable\" not found. Present signals: none"
+      },
+      {
+        "text": "Signal \"row-lever\" present (proves HTML table-patterns)",
+        "passed": false,
+        "evidence": "Signal \"row-lever\" not found. Present signals: none"
+      },
+      {
+        "text": "Signal \"slab-hollow\" present (proves HTML table-patterns)",
+        "passed": false,
+        "evidence": "Signal \"slab-hollow\" not found. Present signals: none"
+      },
+      {
+        "text": "Signal \"zap()\" present (proves JS event-handling)",
+        "passed": false,
+        "evidence": "Signal \"zap()\" not found. Present signals: none"
+      },
+      {
+        "text": "Signal \"on_x_y\" present (proves JS event-handling)",
+        "passed": false,
+        "evidence": "Signal \"on_x_y\" not found. Present signals: none"
+      },
+      {
+        "text": "Signal \"data-slab-id\" present (proves HTML table-patterns)",
+        "passed": false,
+        "evidence": "Signal \"data-slab-id\" not found. Present signals: none"
+      }
+    ],
+    "summary": {
+      "passed": 1,
+      "failed": 6,
+      "total": 7,
+      "pass_rate": 0.14285714285714285
+    }
+  },
+  "treatment": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 41 events in 160.8s"
+      },
+      {
+        "text": "Signal \"data-rankable\" present (proves HTML table-patterns)",
+        "passed": true,
+        "evidence": "Signal \"data-rankable\" found in output"
+      },
+      {
+        "text": "Signal \"row-lever\" present (proves HTML table-patterns)",
+        "passed": true,
+        "evidence": "Signal \"row-lever\" found in output"
+      },
+      {
+        "text": "Signal \"slab-hollow\" present (proves HTML table-patterns)",
+        "passed": true,
+        "evidence": "Signal \"slab-hollow\" found in output"
+      },
+      {
+        "text": "Signal \"zap()\" present (proves JS event-handling)",
+        "passed": true,
+        "evidence": "Signal \"zap()\" found in output"
+      },
+      {
+        "text": "Signal \"on_x_y\" present (proves JS event-handling)",
+        "passed": true,
+        "evidence": "Signal \"on_x_y\" found in output"
+      },
+      {
+        "text": "Signal \"data-slab-id\" present (proves HTML table-patterns)",
+        "passed": true,
+        "evidence": "Signal \"data-slab-id\" found in output"
+      }
+    ],
+    "summary": {
+      "passed": 7,
+      "failed": 0,
+      "total": 7,
+      "pass_rate": 1
+    }
+  }
+}

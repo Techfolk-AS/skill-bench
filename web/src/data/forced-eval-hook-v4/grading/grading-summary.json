@@ -1,0 +1,16 @@
+{
+  "experiment": "forced-eval-hook-v4",
+  "date": "2026-03-18",
+  "prompts_graded": 8,
+  "control": {
+    "passed": 47,
+    "total": 58,
+    "pass_rate": 0.8103448275862069
+  },
+  "treatment": {
+    "passed": 52,
+    "total": 58,
+    "pass_rate": 0.896551724137931
+  },
+  "delta_pass_rate": 0.0862068965517242
+}

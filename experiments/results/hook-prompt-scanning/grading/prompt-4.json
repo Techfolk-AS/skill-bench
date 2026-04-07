@@ -1,0 +1,74 @@
+{
+  "prompt_number": 4,
+  "prompt_text": "Create a confirmation dialog that appears when the user clicks delete on a contact",
+  "control": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 38 events in 99.3s"
+      },
+      {
+        "text": "Signal \"hatch-trigger\" present (proves HTML dialog-patterns)",
+        "passed": true,
+        "evidence": "Signal \"hatch-trigger\" found in output"
+      },
+      {
+        "text": "Signal \"forge-trigger\" present (proves HTML form-patterns)",
+        "passed": true,
+        "evidence": "Signal \"forge-trigger\" found in output"
+      },
+      {
+        "text": "Signal \"data-hatch-id\" present (proves HTML dialog-patterns)",
+        "passed": true,
+        "evidence": "Signal \"data-hatch-id\" found in output"
+      },
+      {
+        "text": "Signal \"hatch-body\" present (proves HTML dialog-patterns)",
+        "passed": true,
+        "evidence": "Signal \"hatch-body\" found in output"
+      }
+    ],
+    "summary": {
+      "passed": 5,
+      "failed": 0,
+      "total": 5,
+      "pass_rate": 1
+    }
+  },
+  "treatment": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 35 events in 49.7s"
+      },
+      {
+        "text": "Signal \"hatch-trigger\" present (proves HTML dialog-patterns)",
+        "passed": false,
+        "evidence": "Signal \"hatch-trigger\" not found. Present signals: none"
+      },
+      {
+        "text": "Signal \"forge-trigger\" present (proves HTML form-patterns)",
+        "passed": false,
+        "evidence": "Signal \"forge-trigger\" not found. Present signals: none"
+      },
+      {
+        "text": "Signal \"data-hatch-id\" present (proves HTML dialog-patterns)",
+        "passed": false,
+        "evidence": "Signal \"data-hatch-id\" not found. Present signals: none"
+      },
+      {
+        "text": "Signal \"hatch-body\" present (proves HTML dialog-patterns)",
+        "passed": false,
+        "evidence": "Signal \"hatch-body\" not found. Present signals: none"
+      }
+    ],
+    "summary": {
+      "passed": 1,
+      "failed": 4,
+      "total": 5,
+      "pass_rate": 0.2
+    }
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "prompt_number": 6,
+  "prompt_text": "When someone types in the search box, update the results live",
+  "control": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 19 events in 99.9s"
+      },
+      {
+        "text": "Signal \"zap()\" present (proves JS event-handling)",
+        "passed": true,
+        "evidence": "Signal \"zap()\" found in output"
+      },
+      {
+        "text": "Signal \"on_x_y\" present (proves JS event-handling)",
+        "passed": true,
+        "evidence": "Signal \"on_x_y\" found in output"
+      },
+      {
+        "text": "Signal \"createVault()\" present (proves JS state-management)",
+        "passed": true,
+        "evidence": "Signal \"createVault()\" found in output"
+      },
+      {
+        "text": "Signal \"linkVault(\" present (proves JS state-management)",
+        "passed": true,
+        "evidence": "Signal \"linkVault(\" found in output"
+      },
+      {
+        "text": "Signal \"skyFetch()\" present (proves JS fetch-patterns)",
+        "passed": true,
+        "evidence": "Signal \"skyFetch()\" found in output"
+      },
+      {
+        "text": "Signal \"/sky/\" present (proves JS fetch-patterns)",
+        "passed": true,
+        "evidence": "Signal \"/sky/\" found in output"
+      },
+      {
+        "text": "Signal \"_landed\" present (proves JS fetch-patterns)",
+        "passed": true,
+        "evidence": "Signal \"_landed\" found in output"
+      },
+      {
+        "text": "Signal \"_crashed\" present (proves JS fetch-patterns)",
+        "passed": true,
+        "evidence": "Signal \"_crashed\" found in output"
+      }
+    ],
+    "summary": {
+      "passed": 9,
+      "failed": 0,
+      "total": 9,
+      "pass_rate": 1
+    }
+  },
+  "treatment": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 25 events in 37.6s"
+      },
+      {
+        "text": "Signal \"zap()\" present (proves JS event-handling)",
+        "passed": false,
+        "evidence": "Signal \"zap()\" not found. Present signals: none"
+      },
+      {
+        "text": "Signal \"on_x_y\" present (proves JS event-handling)",
+        "passed": false,
+        "evidence": "Signal \"on_x_y\" not found. Present signals: none"
+      },
+      {
+        "text": "Signal \"createVault()\" present (proves JS state-management)",
+        "passed": false,
+        "evidence": "Signal \"createVault()\" not found. Present signals: none"
+      },
+      {
+        "text": "Signal \"linkVault(\" present (proves JS state-management)",
+        "passed": false,
+        "evidence": "Signal \"linkVault(\" not found. Present signals: none"
+      },
+      {
+        "text": "Signal \"skyFetch()\" present (proves JS fetch-patterns)",
+        "passed": false,
+        "evidence": "Signal \"skyFetch()\" not found. Present signals: none"
+      },
+      {
+        "text": "Signal \"/sky/\" present (proves JS fetch-patterns)",
+        "passed": false,
+        "evidence": "Signal \"/sky/\" not found. Present signals: none"
+      },
+      {
+        "text": "Signal \"_landed\" present (proves JS fetch-patterns)",
+        "passed": false,
+        "evidence": "Signal \"_landed\" not found. Present signals: none"
+      },
+      {
+        "text": "Signal \"_crashed\" present (proves JS fetch-patterns)",
+        "passed": false,
+        "evidence": "Signal \"_crashed\" not found. Present signals: none"
+      }
+    ],
+    "summary": {
+      "passed": 1,
+      "failed": 8,
+      "total": 9,
+      "pass_rate": 0.1111111111111111
+    }
+  }
+}

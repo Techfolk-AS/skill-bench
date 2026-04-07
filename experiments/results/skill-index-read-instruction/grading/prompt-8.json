@@ -1,0 +1,64 @@
+{
+  "prompt_number": 8,
+  "prompt_text": "Fetch contacts from a /api/contacts endpoint and display them in the table on page load",
+  "control": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": true,
+        "evidence": "Completed with 15 events in 55.7s"
+      },
+      {
+        "text": "Signal \"on_x_y\" present (proves JS event-handling)",
+        "passed": true,
+        "evidence": "Signal \"on_x_y\" found in output"
+      },
+      {
+        "text": "Signal \"_landed\" present (proves JS fetch-patterns)",
+        "passed": true,
+        "evidence": "Signal \"_landed\" found in output"
+      },
+      {
+        "text": "Signal \"_crashed\" present (proves JS fetch-patterns)",
+        "passed": true,
+        "evidence": "Signal \"_crashed\" found in output"
+      }
+    ],
+    "summary": {
+      "passed": 4,
+      "failed": 0,
+      "total": 4,
+      "pass_rate": 1
+    }
+  },
+  "treatment": {
+    "expectations": [
+      {
+        "text": "Prompt completed successfully",
+        "passed": false,
+        "evidence": "No data (run failed or missing)"
+      },
+      {
+        "text": "Signal \"on_x_y\" present (proves JS event-handling)",
+        "passed": false,
+        "evidence": "No data (run failed or missing)"
+      },
+      {
+        "text": "Signal \"_landed\" present (proves JS fetch-patterns)",
+        "passed": false,
+        "evidence": "No data (run failed or missing)"
+      },
+      {
+        "text": "Signal \"_crashed\" present (proves JS fetch-patterns)",
+        "passed": false,
+        "evidence": "No data (run failed or missing)"
+      }
+    ],
+    "summary": {
+      "passed": 0,
+      "failed": 4,
+      "total": 4,
+      "pass_rate": 0
+    }
+  }
+}

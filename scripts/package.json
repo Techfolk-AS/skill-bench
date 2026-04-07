@@ -1,0 +1,17 @@
+{
+  "name": "profile-experiment-scripts",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "compare": "npx tsx compare-sessions.ts",
+    "report": "npx tsx generate-report.ts",
+    "grade": "npx tsx grade-experiment.ts",
+    "benchmark": "npx tsx generate-benchmark.ts",
+    "viewer": "npx tsx launch-viewer.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  }
+}

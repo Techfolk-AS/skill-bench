@@ -1,0 +1,16 @@
+{
+  "experiment": "skill-index-read-instruction",
+  "date": "2026-03-30",
+  "prompts_graded": 9,
+  "control": {
+    "passed": 26,
+    "total": 37,
+    "pass_rate": 0.7027027027027027
+  },
+  "treatment": {
+    "passed": 29,
+    "total": 37,
+    "pass_rate": 0.7837837837837838
+  },
+  "delta_pass_rate": 0.08108108108108103
+}

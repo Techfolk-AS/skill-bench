@@ -1,0 +1,16 @@
+{
+  "experiment": "hook-prompt-scanning",
+  "date": "2026-03-30",
+  "prompts_graded": 9,
+  "control": {
+    "passed": 33,
+    "total": 39,
+    "pass_rate": 0.8461538461538461
+  },
+  "treatment": {
+    "passed": 34,
+    "total": 39,
+    "pass_rate": 0.8717948717948718
+  },
+  "delta_pass_rate": 0.02564102564102566
+}
