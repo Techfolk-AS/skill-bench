@@ -33,9 +33,9 @@ export default function RootLayout({
             <Link href="/" className="text-lg font-semibold tracking-tight">
               SkillBench
             </Link>
-            <span className="text-sm text-zinc-500">
-              Claude Code A/B experiments
-            </span>
+            <Link href="/methodology" className="text-sm text-zinc-500 hover:text-zinc-300 transition-colors">
+              Methodology
+            </Link>
           </div>
         </nav>
         <main className="mx-auto max-w-5xl px-6 py-8">{children}</main>
